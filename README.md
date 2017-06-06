@@ -1,5 +1,5 @@
-# Kejin
+# Fingerkkk
 
-> 自己选的路，跪着也要走下去
+> 世事洞明皆学问
 
 ![Blog](/assets/img/blog.png)
