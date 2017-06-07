@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: Sdcv使用和词典排序
-time: 2019年06月08日 星期四
+time: 2017年06月08日 星期四
 location: 中国
 pulished: true
 excerpt_separator: "```"
@@ -19,10 +19,13 @@ Sdcv是星际译王的命令行版。用过图形界面的翻译软件，为了�
     sdcv 'cult*e'
 4. 还有一种全文查询，在词典里全文搜索，而不是只匹配词条：
     sdcv '|字词'
-<img src="/assets/img/sdcv1.png" width="200px" />
+
+<img src="/assets/img/sdcv1.png" width="300px" />
+
 可以看到全文查询清漪园，由于没有词条匹配，所以显示的是颐和园的释义，因为颐和园里有清漪园匹配到了。
 
 + #### 词典排序
 
 为了字典排序当时颇飞了一番心思，因为当时没有此功能。最近版本作者加入了排序功能，新建~/.sdcv_ordering，按照sdcv -l里的词典名称排序，每行一个词典。查询结果就会按照此顺序显示。
-<img src="/assets/img/sdcv2.png" width="116px" />
+
+<img src="/assets/img/sdcv2.png" width="300px" />
