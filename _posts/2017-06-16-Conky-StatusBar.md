@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: Conky状态栏配置
+title: Conky状态栏
 time: 2017年06月16日 星期五
 location: 中国
 pulished: true
@@ -20,7 +20,6 @@ excerpt_separator: "```"
 	own_window_type = 'normal',
 	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',
 ```
-
 2. 状态栏信息用一行文字呈现。这样就只需在conky.text里鼓捣，内容根据自己的需求配置，参考conky的manpage，很详细。
 
 + #### 美化
@@ -35,10 +34,11 @@ excerpt_separator: "```"
 ```bash
 echo '\ue19a'
 ```
-4.复制此颜文字到conkyrc里使用，格式如下。
+4. 复制此颜文字到conkyrc里使用，格式如下。
 ```xml
 ${font Wuncon Siji:size=10}${font}
 ```
+
 #### 字体设置
 
 需要注意conkyrc里的主字体设置和conky.text里的字体设置需要调整下，否则文字倾斜，我这里主字体Fira是8px，siji是10px。  
