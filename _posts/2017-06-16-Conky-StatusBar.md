@@ -13,7 +13,6 @@ excerpt_separator: "```"
 + #### 配置
 
 1. 想要的是状态栏风格，就要满足悬浮顶层，背景透明，不可移动等特性，一项项实现。把下面的代码加入到conkyrc里，就可以实现上面所说的几个要求了。
-
 ```xml
 
 	own_window_transparent = true,
