@@ -55,4 +55,4 @@ ${font Wuncon Siji:size=10}${font}
 
 最后成果。
 
-<img src="/assets/img/conky.png" width="577px" />
+<img src="/assets/img/conky.png" width="572px" />
