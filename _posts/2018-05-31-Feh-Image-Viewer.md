@@ -29,7 +29,7 @@ excerpt_separator: "```"
 
 - ##### themes
 
-  设置界面功能，可以添加各种功能选项启动feh。而且可以设置多种模式调用，命令为feh的模式就会被默认调用。
+  设置界面功能，可以添加各种功能选项启动feh。而且可以设置多种模式调用，命名为feh的模式就会被默认调用。
 
   ```bash
   feh -g 1280x775 --scroll-step 180 --title 'feh@%u/%l %S %t %m %wx%h zoom<%z> - %n'
@@ -68,6 +68,8 @@ excerpt_separator: "```"
   ```bash
   mpv -loop xx.gif
   ```
+
+
 
   > Do One Thing and Do It Well.
 
