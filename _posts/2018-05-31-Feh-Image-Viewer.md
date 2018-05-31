@@ -71,4 +71,4 @@ excerpt_separator: "```"
 
   > Do One Thing and Do It Well.
 
-核心简洁，效率，自定义程度丰富，linux下的优秀软件大抵如此。
+unix软件哲学大道至简，核心简洁，效率，自定义程度丰富，linux下的优秀软件也大抵如此。
