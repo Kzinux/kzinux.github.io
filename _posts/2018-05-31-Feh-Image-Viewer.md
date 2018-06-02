@@ -63,11 +63,20 @@ excerpt_separator: "```"
   zoom_out 5
   ```
 
-  作者拒绝加入gif动图功能，这个倒无所谓，很少本地看gif动图，推荐用mpv查看。
+
+作者拒绝加入gif动图功能，这个倒无所谓，很少本地看gif动图，推荐用mpv查看。
 
   ```bash
   mpv -loop xx.gif
   ```
+
+最后就是pcmanfm文件管理器启动问题，默认情况下feh只会打开当前图片不会加载文件夹内的其它图片。之前用的sxiv也是这样，后来用脚本解决的，feh也google找了段脚本，可能太旧了，运行后吃光资源卡死系统。后来还是在feh的github页issue里找到了作者的回复。把下面代码保存为fehbrowser，移动到/usr/local/bin下，改可执行权限，然后文件管理器里右键打开方式调用「fehbrowser %f」。第二个$1也要用双引号，作者没加导致在复杂路径下会失效。
+
+```bash
+#!/bin/sh
+feh --sort filename --start-at "$1" "$(dirname "$1")"
+
+```
 
 
 
