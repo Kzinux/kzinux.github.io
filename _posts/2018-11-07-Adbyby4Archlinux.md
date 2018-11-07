@@ -35,7 +35,7 @@ rule=none
 
 里面有个startadbyby脚本，看了下是后台运行adbyby并且设置iptables透明代理，需要root权限运行否则iptables命令会提示权限不够。试了下发现命令在archlinux下不兼容我也懒得查了，直接启动adbyby作为一个本地代理，地址就是上面的127.0.0.1:8118，然后将系统代理设置成这个地址就可以将网页转发给adbyby过滤广告了。
 
-对于需要科学上网的网友，可以将默认代理设置成adbyby的监听地址，这个有个缺点就是代理访问的网站就无法广告过滤了。我用的是pac管理代理，做如下设置即可。
+对于需要科学上网的网友，可以将默认地址设置成adbyby的监听地址，这个有个缺点就是代理访问的网站就无法广告过滤了。我用的是pac管理代理，做如下设置即可。
 
 ```javascript
 function FindProxyForURL(url, host) {
