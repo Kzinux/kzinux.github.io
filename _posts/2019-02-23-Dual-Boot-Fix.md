@@ -15,11 +15,11 @@ excerpt_separator: "```"
 
 事前不仔细，事后穷忙活。win7进不去了，进arch重新生成grub.cfg然后重启win7依旧grub界面。这种情况多是让修复mbr，但是我双系统引导的grub就装在mbr，修复了双系统grub会受影响。后来又找到个方法可以用命令进win7，那就先进去。
 
-`find --set-root /bootmgr`
-
-`chainloader /bootmgr`
-
-`boot`
+```bash
+find --set-root /bootmgr	
+chainloader /bootmgr	
+boot
+```
 
 每行一个命令回车执行后输入下一行，倒是进去了但是没法修复，不能每次启动都这样。
 
@@ -27,9 +27,10 @@ excerpt_separator: "```"
 
 进了arch就简单了，重新安装grub到mbr，然后重新生成grub.cfg就成了。
 
-`grub-install --target=i386-pc /dev/sdx`
-
-`grub-mkconfig -o /boot/grub/grub.cfg`
+```bash
+grub-install --target=i386-pc /dev/sdx
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 第一行x就是双系统所在盘，比如我的是sda，第二行重新生成grub.cfg，重启就恢复grub了。
 
