@@ -26,17 +26,19 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 
 6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/gdop66vs.default/startupCache`，再打开firefox就可以体验久违的全局快捷键了。
 
-#### 自定义滚屏快捷键
+***Firefox65取消了platformHTMLBindings.xml文件，搜索代码也没有另外修改的地方了。***
 
-1. 滚屏命令browser.xul里没有，这里另外添加，复制/usr/lib/firefox/omni.ja到空目录，解压至当前文件。
+#### ~~自定义滚屏快捷键~~
 
-2. 照样剪切omni.ja到其它文件夹。
+1. ~~滚屏命令browser.xul里没有，这里另外添加，复制/usr/lib/firefox/omni.ja到空目录，解压至当前文件。~~
 
-3. 编辑器打开chrome/toolkit/content/global/platformHTMLBindings.xml，找到binding id="browser"下面的滚屏命令，复制需要的命令到新行，我直接在原代码下面复制的。
+2. ~~照样剪切omni.ja到其它文件夹。~~
 
-   <img src="/assets/img/firefox-shortcut2.png" width="481px" />
+3. ~~编辑器打开chrome/toolkit/content/global/platformHTMLBindings.xml，找到binding id="browser"下面的滚屏命令，复制需要的命令到新行，我直接在原代码下面复制的。~~
 
-4. 保存退出，照样压缩，注意压缩等级为存储。`zip -Z store -r omni.zip *`
+   ~~<img src="/assets/img/firefox-shortcut2.png" width="481px" />~~
 
-5. 关闭firefox，复制omni.zip替换/usr/lib/firefox/omni.ja，删除startupcache文件夹，重新打开firefox即可。
+4. ~~保存退出，照样压缩，注意压缩等级为存储。`zip -Z store -r omni.zip *`~~
+
+5. ~~关闭firefox，复制omni.zip替换/usr/lib/firefox/omni.ja，删除startupcache文件夹，重新打开firefox即可。~~
 
