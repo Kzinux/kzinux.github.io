@@ -42,3 +42,45 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 
 5. ~~关闭firefox，复制omni.zip替换/usr/lib/firefox/omni.ja，删除startupcache文件夹，重新打开firefox即可。~~
 
+**2019-3-3更新**
+
+#### 自定义滚屏快捷键
+
+Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受。想将就下用webextension版的快捷键扩展，一看到一条条的限制又不想用。本来想从系统软件方面解决的，win下倒是有个好替代方案autohotkey，linux下只有个类似的autokey，有点臃肿。还有用xbindkeys和xdotool的，不过还是不完美。
+
+最后还是从firefox自带的browser.xul上找到了解决办法。
+
+1. 复制/usr/lib/firefox/browser/omni.ja到空文件夹用unzip解压。
+
+2. 移走omni.ja以免重复打包。
+
+3. 编辑chrome/browser/content/browser/browser.xul，在 <commandset id="mainCommandSet">下添加所需的滚屏命令，如下格式：
+
+   ```xml
+     <command id="cmd_moveUp" oncommand="goDoCommand('cmd_moveUp')"/>
+     <command id="cmd_moveDown" oncommand="goDoCommand('cmd_moveDown')"/>
+     <command id="cmd_movePageUp" oncommand="goDoCommand('cmd_movePageUp')"/>
+     <command id="cmd_movePageDown" oncommand="goDoCommand('cmd_movePageDown')"/>
+     <command id="cmd_moveTop" oncommand="goDoCommand('cmd_moveTop')"/>
+     <command id="cmd_moveBottom" oncommand="goDoCommand('cmd_moveBottom')"/>
+   
+   ```
+
+4. 再在<keyset id="mainKeyset">下添加上面定义的滚屏命令，如下格式:
+
+   ```xml
+       <key key="j" command="cmd_moveDown"/>
+       <key key="k" command="cmd_moveUp"/>
+       <key key="m" command="cmd_movePageDown"/>
+       <key key="o" command="cmd_movePageUp"/>
+       <key key="g" command="cmd_moveTop"/>
+       <key key="b" command="cmd_moveBottom"/>
+   ```
+
+5. 编辑完成保存退出，然后把所有文件用zip格式重新压缩，压缩等级为存储。
+
+   ```bash
+   zip -Z store -r omni.zip *
+   ```
+
+6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/gdop66vs.default/startupCache`，然后打开firefox快捷键就生效了。
