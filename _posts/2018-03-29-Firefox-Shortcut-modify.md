@@ -77,10 +77,6 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
        <key key="b" command="cmd_moveBottom"/>
    ```
 
-5. 编辑完成保存退出，然后把所有文件用zip格式重新压缩，压缩等级为存储。
-
-   ```bash
-   zip -Z store -r omni.zip *
-   ```
+5. 编辑完成保存退出，然后把所有文件用zip格式重新压缩，压缩等级为存储。`zip -Z store -r omni.zip *`
 
 6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/gdop66vs.default/startupCache`，然后打开firefox快捷键就生效了。
