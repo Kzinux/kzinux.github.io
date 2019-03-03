@@ -54,7 +54,7 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
 
 2. 移走omni.ja以免重复打包。
 
-3. 编辑chrome/browser/content/browser/browser.xul，在 <commandset id="mainCommandSet">下添加所需的滚屏命令，如下格式：
+3. 编辑chrome/browser/content/browser/browser.xul，在 commandset id="mainCommandSet">下添加所需的滚屏命令，如下格式：
 
    ```xml
      <command id="cmd_moveUp" oncommand="goDoCommand('cmd_moveUp')"/>
@@ -66,7 +66,7 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
    
    ```
 
-4. 再在<keyset id="mainKeyset">下添加上面定义的滚屏命令，如下格式:
+4. 再在keyset id="mainKeyset">下添加上面定义的滚屏命令，如下格式:
 
    ```xml
        <key key="j" command="cmd_moveDown"/>
