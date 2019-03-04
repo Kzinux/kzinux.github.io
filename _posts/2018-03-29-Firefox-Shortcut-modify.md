@@ -24,7 +24,7 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 
 5. 编辑完成保存退出，然后把所有文件用zip格式重新压缩，压缩等级为存储。`zip -Z store -r omni.zip *`
 
-6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/gdop66vs.default/startupCache`，再打开firefox就可以体验久违的全局快捷键了。
+6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/xxxxxx.default/startupCache`，再打开firefox就可以体验久违的全局快捷键了。
 
 ***Firefox65取消了platformHTMLBindings.xml文件，搜索代码也没有另外修改的地方了。***
 
@@ -63,7 +63,6 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
      <command id="cmd_movePageDown" oncommand="goDoCommand('cmd_movePageDown')"/>
      <command id="cmd_moveTop" oncommand="goDoCommand('cmd_moveTop')"/>
      <command id="cmd_moveBottom" oncommand="goDoCommand('cmd_moveBottom')"/>
-   
    ```
 
 4. 再在keyset id="mainKeyset">下添加上面定义的滚屏命令，如下格式:
@@ -79,4 +78,4 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
 
 5. 编辑完成保存退出，然后把所有文件用zip格式重新压缩，压缩等级为存储。`zip -Z store -r omni.zip *`
 
-6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/gdop66vs.default/startupCache`，然后打开firefox快捷键就生效了。
+6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/xxxxxx.default/startupCache`，然后打开firefox快捷键就生效了。
