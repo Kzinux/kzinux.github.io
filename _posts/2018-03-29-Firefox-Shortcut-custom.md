@@ -46,7 +46,7 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 
 #### 自定义滚屏快捷键
 
-Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受。想将就下用webextension版的快捷键扩展，一看到一条条的限制又不想用。本来想从系统软件方面解决的，win下倒是有个好替代方案autohotkey，linux下只有个类似的autokey，有点臃肿。还有用xbindkeys和xdotool的，不过还是不完美。
+Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受。想将就下用webextension版的快捷键扩展，一看到一条条的限制又不想用。本来想从系统软件方面解决的，win下倒是有个好替代方案autohotkey(win下试了下无法jk输入打字)，linux下只有个类似的autokey，有点臃肿。还有用xbindkeys和xdotool的，不过还是不完美。
 
 最后还是从firefox自带的browser.xul上找到了解决办法。
 
