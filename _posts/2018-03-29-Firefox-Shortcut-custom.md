@@ -80,6 +80,6 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
 
 6. 关闭firefox，把生成的omni.zip复制替换/usr/lib/firefox/browser/omni.ja，删除配置文件下的startupcache文件夹，linux是`rm -r ~/.cache/mozilla/firefox/xxxxxx.default/startupCache`，然后打开firefox快捷键就生效了。
 
-##### 2019-10-23更新
+##### **2019-10-23更新**
 
 Firefox69开始browser.xul被舍弃了，改成了browser.xhtml，修改方法没变，对象改成browser.xhtml就没问题了。
