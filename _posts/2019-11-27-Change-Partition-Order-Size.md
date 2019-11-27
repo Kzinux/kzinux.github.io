@@ -31,13 +31,9 @@ excerpt_separator: "```"
 
 1. 首先卸载分区sdb2
 
-2. 用sfdisk导出分区表命令为sdb.bkp
+2. 用sfdisk导出分区表命令为sdb.bkp`sfdisk -d /dev/sdb > sdb.bkp`
 
-   `sfdisk -d /dev/sdb > sdb.bkp`
-
-3. 然后备份一下
-
-   `cp sdb.bkp sdb.new`
+3. 然后备份一下`cp sdb.bkp sdb.new`
 
 4. 现在开始编辑分区表sdb.new，我的是这样
 
@@ -54,9 +50,7 @@ excerpt_separator: "```"
 
 5. 把sdb2改成sdb1然后保存退出
 
-6. 再导入新的分区表
-
-   `sfdisk /dev/sdb < sdb.new`
+6. 再导入新的分区表`sfdisk /dev/sdb < sdb.new`
 
 7. lsblk看了下更改成功
 
