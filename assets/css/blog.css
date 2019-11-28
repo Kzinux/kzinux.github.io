@@ -71,7 +71,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin: 0;
@@ -107,7 +107,7 @@ nav.menu li:last-child {
     max-width: 650px;
     width: 90%;
     margin: 20px auto;
-    font-family: "Roboto Slab", "Merriweather", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+    font-family: "Roboto Slab", "Merriweather", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
     font-size: 15px;
     line-height: 1.8em;
 }
@@ -126,7 +126,7 @@ article.preview {
 
 .post-time {
     color: #95a5a6;
-    font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
     font-size: 15px;
     font-weight: 300;
     text-transform: uppercase;
@@ -154,7 +154,7 @@ blockquote {
 
 .article-time {
     color: #95a5a6;
-    font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
     font-size: 13px;
     font-weight: 300;
     text-align: center;
@@ -162,7 +162,7 @@ blockquote {
 
 .article-hint {
     color: #95a5a6;
-    font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
     font-size: 13px;
     font-weight: 300;
     text-align: center;
@@ -222,6 +222,6 @@ div.authorimage {
     color: #f0f0f0;
     background-color: #575757;
     background-color: rgba(51, 123, 181, 0.6);
-    font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L",sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus L",sans-serif;
     margin-top: 40px;
 }
