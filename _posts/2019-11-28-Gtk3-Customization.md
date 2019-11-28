@@ -42,7 +42,7 @@ excerpt_separator: "```"
 
    把text_color和fg_color对应行的第一个颜色改成中意的字体颜色。
 
-4. 用下面的命令开始编译，prefix后面跟着的是生成主题的路径。`./autogen.sh --prefix=/usr` `make install`
+4. 用下面的命令开始编译，prefix后面跟着的是生成主题的路径。`./autogen.sh --prefix=/home/user/theme` `make install`
 
 5. 最后把生成的新主题里的gtk.gresource文件覆盖原来主题的对应此文件。
 
