@@ -13,7 +13,7 @@ excerpt_separator: "```"
 
 
 
-最近在使用arc的gtk主题，archlinux源里的arc-solid-gtk-theme，跟普通版相比禁用了透明。此主题简单大方不失精致，用了段事件挺满意的，不过有个问题就是字体颜色太淡了，看起来很累眼。
+最近在使用arc的gtk主题，archlinux源里的arc-solid-gtk-theme，跟普通版相比禁用了透明。此主题简单大方不失精致，用了段时间挺满意的，不过有个问题就是字体颜色太淡了，看起来很累眼。
 
 字体颜色归gtk主题管，gtk又分为gtk2和gtk3，现在就分别修改下。
 
