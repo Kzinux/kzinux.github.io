@@ -9,7 +9,7 @@ layout: blog_layout
 </p>
     <section class="post-section">
         <p>
-    {{ post.excerpt }}
+{{ post.content ||split:'<!--more-->' | first }}
         </p>
         <p class="readmore">
             <a href="{{ post.url }}">
