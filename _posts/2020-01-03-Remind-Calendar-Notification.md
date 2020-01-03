@@ -29,7 +29,7 @@ excerpt_separator: "```"
 在每月的第一个周六上午九点半发送通知提醒`REM Sat 1 AT 9:30 RUN notify-send -a Remind -i calendar -t 0 "青山依旧在"`
 
 上面只是一些基本用法，可以将年月日以及星期组合成各种你想要的结果，就不一一介绍。
-
+<!-- more -->
 #### **Notification**
 
 桌面环境默认组件，分为后台daemon和前台命令notify-send。Openbox是一个窗口管理器，当然没有通知组件，需要自己安装，一般安装后台daemon就行了，前台的notify-send「libnotify」作为很多软件的依赖已安装了。

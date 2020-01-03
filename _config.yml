@@ -30,5 +30,9 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
+#分页设置
 paginate: 5
 paginate_path: "page:num"
+
+#主页摘要分隔符
+excerpt_separator:  '<!-- more -->'
