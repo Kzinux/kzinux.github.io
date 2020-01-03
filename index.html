@@ -3,13 +3,16 @@ layout: blog_layout
 ---
 <!-- 遍历分页后的文章 -->
 {% for post in paginator.posts %}
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 <p class="author">
 <span class="post-time">{{ post.time }}</span>
 </p>
     <section class="post-section">
         <p>
-    {% post.excerpt: {% post.excerpt %} %}
+    {{ post.content | strip_html | truncate:300 }}
+    {% if post.content | size > 300 %}
+        <strong>Read more</strong>
+    {% endif %}
         </p>
         <p class="readmore">
             <a href="{{ post.url }}">
