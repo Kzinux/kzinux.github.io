@@ -7,9 +7,17 @@ layout: blog_layout
 <p class="author">
 <span class="post-time">{{ post.time }}</span>
 </p>
-<div class="content">
-{{ post.content }}
-</div>
+    <section class="post-section">
+        <p>
+            {{ post.excerpt }}
+        </p>
+        <p class="readmore">
+            <a href="{{ post.url }}">
+                阅读全文
+                <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </p>
+    </section>
 {% endfor %}
 
 <!-- 分页链接 -->
