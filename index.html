@@ -9,13 +9,17 @@ layout: blog_layout
 </p>
     <section class="post-section">
         <p>
-{{ post.content ||split:'<!--more-->' | first }}
-        </p>
+    {% if post.content contains "<!--more-->" %}
+      {{ post.content | split:"<!--more-->" | first % }}
         <p class="readmore">
             <a href="{{ post.url }}">
                 阅读全文
                 <span class="glyphicon glyphicon-circle-arrow-right"></span>
             </a>
+        </p>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
         </p>
     </section>
 {% endfor %}
