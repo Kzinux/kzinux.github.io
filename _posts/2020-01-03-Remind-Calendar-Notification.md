@@ -72,7 +72,7 @@ lxqt桌面的通知服务，依赖不多，可以设置位置和大小。
 
 <img src="/assets/img/dunst.png" width="312px" />
 
-xfce4-notifyd，mate-notification-daemon，notify-osd和lxqt-notificationd都挺不错的，分不出高下，最终选择了lxqt-notificationd。
+xfce4-notifyd，mate-notification-daemon，notify-osd和lxqt-notificationd都挺不错的，按外观来说xfce4-notifyd>lxqt-notificationd>notify-osd>mate-notification-daemon。最终选择了lxqt-notificationd，浅色背景的通知跟系统主题更搭而且醒目点，深色通知背景和深色系统主题混在一起不能一目了然。
 
 lxqt-notificationd测试时正常，后来用dbus启动发现图标不见了，换成firefox、gvim有图标，但是很多程序都没图标了。仔细查看下发现原来图标主题变成了hicolor而不是默认的papirus，换个启动方式为何图标主题就变了？
 
