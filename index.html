@@ -9,10 +9,7 @@ layout: blog_layout
 </p>
     <section class="post-section">
         <p>
-    {{ post.content | strip_html | truncate:300 }}
-    {% if post.content | size > 300 %}
-        <strong>Read more</strong>
-    {% endif %}
+{% post.excerpt: {% post.excerpt %} %}
         </p>
         <p class="readmore">
             <a href="{{ post.url }}">
