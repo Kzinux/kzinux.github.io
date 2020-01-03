@@ -21,6 +21,7 @@ excerpt_separator: "```"
 在周一至周五的早上六点半播放铃声提醒`REM Mon Tue Wed Thu Fri AT 6:30 RUN mplayer -loop 0 /path2ringtone/alarm.mp3` 
 
 在每天的下午2点18分发送一条通知提醒`REM AT 14:18 RUN notify-send -a Remind -i calendar -t 0 "滚滚长江东逝水"`
+<!--more-->
 
 在每月的1号上午九点半发送通知提醒`REM 1 AT 9:30 RUN notify-send -a Remind -i calendar -t 0 "浪花淘尽英雄"`
 
@@ -30,7 +31,6 @@ excerpt_separator: "```"
 
 上面只是一些基本用法，可以将年月日以及星期组合成各种你想要的结果，就不一一介绍。
 
-<!--more-->
 
 #### **Notification**
 

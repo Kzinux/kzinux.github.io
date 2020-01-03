@@ -17,7 +17,7 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 2. 把omni.ja剪切到别的地方，以免等下把它打包重复打包。
 
 3. 编辑器打开chrome/browser/content/browser/browser.xul文件，在keyset id="mainKeyset"代码下面添加自定义的快捷键代码，没有特殊需求推荐添加新快捷键不要修改默认快捷键。
-
+<!--more-->
 4. 命令代码都在上面有的，可以自行选择设置。但是browser.xul里没有滚动的代码，所以要编辑另一个文件实现。
 
    <img src="/assets/img/firefox-shortcut1.png" width="369px" />

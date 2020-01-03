@@ -18,7 +18,7 @@ excerpt_separator: "```"
 广告过滤也是被逼出来的，如果广告量适度也不会费这劲。chrome听说内置了广告过滤对付这类恶意广告也维持广告业良性发展，不过chrome势大不代表firefox也可以这么做。
 
 本来对除了扩展的广告过滤也不了解，看了下科普linux下可用的当然最好是路由器采用的广告过滤方案，[Adbyby](http://www.adbyby.com/index.htm)和[Koolproxy](https://koolproxy.io/)。前者是老牌的路由广告过滤软件，koolproxy则是这两年的后起之秀。
-
+<!--more-->
 本来想都试试的，结果昨天adbyby官网挂了我就先下载了koolproxy试用，下载x64包解压，就一个可执行文件，直接运行启动很简单，未见配置文件，不知如何生效。到官方论坛看了下结果作者说未对linux适配，要用iptables命令手动设置，六七条命令看得我迷迷糊糊的，不懂也不想折腾iptables我就放弃了。
 
 Adbyby还好还有个github镜像站，顺利下载了x64包解压这回文件多了些，有adbyby主程序还有配置文件规则数据之类的，先打开配置文件adhook.ini做如下改动

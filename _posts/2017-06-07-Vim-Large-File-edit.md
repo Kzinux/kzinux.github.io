@@ -17,6 +17,7 @@ excerpt_separator: "```"
 ```bash
 vim --startuptime timefile file
 ```
+<!--more-->
 结果发现vim-airline自带的wordcount插件严重拖慢了启动速度，这也不意外，文件越大计算时间越长。
 
 - #### 禁用wordcount插件

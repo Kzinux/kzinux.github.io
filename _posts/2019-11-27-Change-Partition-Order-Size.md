@@ -32,7 +32,7 @@ excerpt_separator: "```"
 1. 首先卸载分区sdb2
 
 2. 用sfdisk导出分区表命令为sdb.bkp`sfdisk -d /dev/sdb > sdb.bkp`
-
+<!--more-->
 3. 然后备份一下`cp sdb.bkp sdb.new`
 
 4. 现在开始编辑分区表sdb.new，我的是这样

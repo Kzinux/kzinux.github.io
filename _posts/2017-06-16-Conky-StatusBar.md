@@ -20,7 +20,7 @@ excerpt_separator: "```"
 	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',
 ```
 2. 状态栏信息用一行文字呈现。这样就只需在conky.text里鼓捣，内容根据自己的需求配置，参考conky的manpage，很详细。
-
+<!--more-->
 + ### 美化
 
 #### 颜文字
