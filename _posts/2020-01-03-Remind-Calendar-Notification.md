@@ -64,7 +64,7 @@ mate桌面的通知服务，不依赖桌面，可以设置主题。
 
 lxqt桌面的通知服务，依赖不多，可以设置位置和大小。
 
-<img src="/assets/img/lxqt-notificationd.png" width="312px" />
+<img src="/assets/img/lxqt-notificationd.png" width="387px" />
 
 - dunst
 
