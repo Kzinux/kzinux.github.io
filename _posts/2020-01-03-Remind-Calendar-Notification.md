@@ -39,7 +39,7 @@ excerpt_separator: "```"
 
 - xfce4-notifyd
 
-  xfce桌面的通知服务，依赖不多，需要安装xfce4桌面的libxfce4ui包，安装后还有一个设置窗口可以设置通知行为和主题。
+xfce桌面的通知服务，依赖不多，需要安装xfce4桌面的libxfce4ui包，安装后还有一个设置窗口可以设置通知行为和主题。
 
 <img src="/assets/img/xfce4-notifyd.png" width="375px" />
 
