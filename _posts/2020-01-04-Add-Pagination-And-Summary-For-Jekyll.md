@@ -17,11 +17,8 @@ Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不�
    paginate: 5
    paginate_path: "page:num"
    ```
-   
-2. 把index.html替换成下面的内容。
+2. 把index.html替换成下面的内容。github显示不全html代码，放个[index.html](https://github.com/Kzinux/kzinux.github.io/blob/master/index.html)链接。
   <!--more-->
-
-  github显示不全html代码，放个[index.html](https://github.com/Kzinux/kzinux.github.io/blob/master/index.html)链接。
   
 3. push到github刷新博客就生效了。
 
