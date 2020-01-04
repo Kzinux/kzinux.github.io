@@ -6,11 +6,6 @@ location: 中国
 pulished: true
 excerpt_separator: "<!--more-->"
 ---
-
-
-
-
-
 Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不过文章多了连分页也没有太不方便，加载也慢。
 
 搜索了下分页和摘要都是Jekyll默认支持的，网上内容很多，步骤也简单。
@@ -18,16 +13,12 @@ Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不�
 #### **分页**
 
 1. 首先编辑_config.yml，在最下方添加下面两行设置，paginate代表每页显示的文章数目，path是后面要用到的不用管。
-<!--more-->
-
    ```
    paginate: 5
    paginate_path: "page:num"
    ```
-
-   
-
 2. 把index.html替换成下面的内容。
+<!--more-->
 
 ```html
 ---
