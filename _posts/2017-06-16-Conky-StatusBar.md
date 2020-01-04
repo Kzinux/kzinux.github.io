@@ -20,7 +20,6 @@ excerpt_separator: "<!--more-->"
 	own_window_hints = 'undecorated,above,sticky,skip_taskbar,skip_pager',
 ```
 2. 状态栏信息用一行文字呈现。这样就只需在conky.text里鼓捣，内容根据自己的需求配置，参考conky的manpage，很详细。
-<!--more-->
 + ### 美化
 
 #### 颜文字
@@ -29,6 +28,7 @@ excerpt_separator: "<!--more-->"
 
 1. 参考官网步骤安装好字体后，找到clone下来的siji镜像,用./view.sh打开脚本，然后就会显示此字体支持的所有颜文字。
 2. 找到需要的颜文字后点击它，在顶部中间character后面的编码信息就会更新成选中的文字。
+<!--more-->
 3. 在终端运行下面的命令就可以显示此颜文字，\u后面就是最后四位编码。
 ```bash
 echo '\ue19a'

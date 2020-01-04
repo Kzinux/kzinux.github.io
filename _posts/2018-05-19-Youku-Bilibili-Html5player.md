@@ -16,5 +16,4 @@ excerpt_separator: "<!--more-->"
 没法就到Bilibili看，bilibili的资源和弹幕比优酷强大太多了。以前是两边都有的才去优酷看，因为bilibili的html5播放器只对chrome系的浏览器有优化，Firefox下渣又卡，优酷的资源占用比它好多了也不卡。
 
 不过说来说去还是比烂，矮子里拔将军，跟y2b的html5播放器一比都是渣。优酷渣可以理解，bilibili好歹是年轻人聚集地，网内网站的弄潮儿，如此不思进取令人不齿。
-<!--more-->
 

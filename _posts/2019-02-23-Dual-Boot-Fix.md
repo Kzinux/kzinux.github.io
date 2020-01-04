@@ -14,7 +14,6 @@ excerpt_separator: "<!--more-->"
 搜了几个序列号都无法激活，过了12点直接给黑屏了，据说越往后正版弹窗系统限制越多。没法百度找了个排最前下载最多的激活工具，一键激活后显示成功让重启，一重启经过grub菜单选择win7后又跳到grub的命令行界面。了解下原来是激活工具有用到grub，激活失败了。
 
 事前不仔细，事后穷忙活。win7进不去了，进arch重新生成grub.cfg然后重启win7依旧grub界面。这种情况多是让修复mbr，但是我双系统引导的grub就装在mbr，修复了双系统grub会受影响。后来又找到个方法可以用命令进win7，那就先进去。
-<!--more-->
 ```bash
 find --set-root /bootmgr	
 chainloader /bootmgr	
@@ -29,6 +28,7 @@ boot
 
 ```bash
 grub-install --target=i386-pc /dev/sdx
+<!--more-->
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 

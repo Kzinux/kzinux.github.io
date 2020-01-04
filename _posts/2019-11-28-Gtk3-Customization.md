@@ -28,11 +28,11 @@ excerpt_separator: "<!--more-->"
 还有种方法就是源码重编译，干净利落。
 
 1. 首先下载github站上的[arc源码](https://github.com/arc-design/arc-theme)，git clone下来。
+<!--more-->
 
 2. 然后根据下面的介绍安装编译所需的依赖。
 
 3. 接下来修改gtk3主题的字体颜色，在源码文件夹下的/arc-theme/common/gtk-3.0/3.xx/sass的_colors.scss里。
-<!--more-->
    ```css
    $base_color: if($variant =='light', #ffffff, #404552);
    $text_color: if($variant == 'light', #263238, #D3DAE3);

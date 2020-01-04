@@ -16,7 +16,6 @@ excerpt_separator: "<!--more-->"
 安装qrencode来生成二维码图片，有复杂需求的可以看manpage，简单的直接在命令行用如下命令生成。
 
 `qrencode '待编码文字' -o qrcode.png`
-<!--more-->
 
 #### 二维码解码
 

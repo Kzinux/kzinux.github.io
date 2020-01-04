@@ -17,7 +17,6 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 2. 把omni.ja剪切到别的地方，以免等下把它打包重复打包。
 
 3. 编辑器打开chrome/browser/content/browser/browser.xul文件，在keyset id="mainKeyset"代码下面添加自定义的快捷键代码，没有特殊需求推荐添加新快捷键不要修改默认快捷键。
-<!--more-->
 4. 命令代码都在上面有的，可以自行选择设置。但是browser.xul里没有滚动的代码，所以要编辑另一个文件实现。
 
    <img src="/assets/img/firefox-shortcut1.png" width="369px" />
@@ -29,6 +28,7 @@ Firefox自宫练《葵花宝典》，原来流畅的全键盘浏览也灰飞烟�
 ***Firefox65取消了platformHTMLBindings.xml文件，搜索代码也没有另外修改的地方了。***
 
 #### ~~自定义滚屏快捷键~~
+<!--more-->
 
 1. ~~滚屏命令browser.xul里没有，这里另外添加，复制/usr/lib/firefox/omni.ja到空目录，解压至当前文件。~~
 

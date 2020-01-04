@@ -28,11 +28,11 @@ excerpt_separator: "<!--more-->"
 重启了下也没变，还是sdb2，虽然不影响使用，总是个瑕疵。搜索了下说可以用fdisk里的f「修复分区顺序」搞定，试了下提示顺序无错，大概是因为只有一个分区所以顺序没问题。fdisk不太聪明的样子。
 
 接下来总算发现了其它办法。「注意：分区表操作有风险」
+<!--more-->
 
 1. 首先卸载分区sdb2
 
 2. 用sfdisk导出分区表命令为sdb.bkp`sfdisk -d /dev/sdb > sdb.bkp`
-<!--more-->
 3. 然后备份一下`cp sdb.bkp sdb.new`
 
 4. 现在开始编辑分区表sdb.new，我的是这样
