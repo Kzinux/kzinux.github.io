@@ -42,7 +42,7 @@ excerpt_separator: "<!--more-->"
 
 xfce桌面的通知服务，依赖不多，需要安装xfce4桌面的libxfce4ui包，安装后还有一个设置窗口可以设置通知行为和主题。
 
-<img src="/assets/img/xfce4-notifyd.png" width="375px" />
+<img src="/assets/img/xfce4-notifyd.png" width="375px" />	<img src="/assets/img/xfce4-notifyd-light.png" width="375px" />
 
 - notify-osd
 
@@ -83,3 +83,13 @@ lxqt-notificationd测试时正常，后来用dbus启动发现图标不见了，�
 解决方法是在dbus的通知服务文件org.freedesktop.Notifications.service加个选项「--platformtheme gtk3」。`Exec=/usr/bin/lxqt-notificationd --platformtheme gtk3`
 
 重启桌面图标就正常了。
+
+*-----------------------2020-01-05------------------------*
+
+用了下来发现lxqt-notification与系统整合得不好，今天用firefox登录网页微信，收到消息弹窗不显示头像，只有消息文字。试了下xfce4-notifyd可以显示头像，就是主题不好与系统不搭。
+
+看了下主题是在/usr/share/theme/xxx/xfce-notify-4.0下，由gtk.css描绘，可惜adapta的xfce4-notifyd主题就只有暗色的，其它浅色的很丑。
+
+打开gtk.css瞄了瞄，其实很简单，就打算自己改一个。把adapta的xfce-notify-4.0文件夹复制到其它主题下，编辑gtk.css，把background-color和字体颜色color改成浅色背景的就行了。
+
+上面加了张修改后的xfce4-notifyd浅色主题截图，自觉比lxqt-notification漂亮ヾ(≧▽≦*)o。
