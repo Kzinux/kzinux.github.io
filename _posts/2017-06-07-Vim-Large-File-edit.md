@@ -4,7 +4,7 @@ title: Vim大文件编辑性能
 time: 2017年06月07日 星期三
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 自用的一个sdcv词典有225M，之前都是用vim编辑整理格式的。最近又打算继续完善下，结果用vim打开后发现可视模式和插入模式输入时都很卡。网上搜了下，类似情况的一般都是代码高亮的问题，我这个几乎没有高亮。不过也提供了解决的方法思路。
 

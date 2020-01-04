@@ -4,7 +4,7 @@ title: Conky状态栏
 time: 2017年06月16日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 目前使用openbox作为窗口管理器，没有装任务栏，所以想找个能显示系统状态的软件。以前都是内嵌到任务栏的，现在没任务栏了，就只能放到标题栏上。找来找去还是conky了，功能最强大，占用很低，配置灵活。  
 

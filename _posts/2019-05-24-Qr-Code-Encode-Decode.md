@@ -4,7 +4,7 @@ title: Arch二维码转换
 time: 2019年05月24日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

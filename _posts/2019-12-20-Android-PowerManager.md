@@ -4,7 +4,7 @@ title: Android异常耗电
 time: 2019年12月20日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

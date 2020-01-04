@@ -4,7 +4,7 @@ title: Gtk3主题修改
 time: 2019年11月28日 星期四
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

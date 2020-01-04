@@ -4,7 +4,7 @@ title: Adm导致Firefox奔溃
 time: 2019年12月18日 星期三
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

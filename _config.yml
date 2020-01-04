@@ -34,3 +34,5 @@ kramdown:
 paginate: 5
 paginate_path: "page:num"
 
+#read more
+excerpt_separator:  '<!--more-->'

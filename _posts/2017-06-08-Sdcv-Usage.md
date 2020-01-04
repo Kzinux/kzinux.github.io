@@ -4,7 +4,7 @@ title: Sdcv使用和词典排序
 time: 2017年06月08日 星期四
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 Sdcv是星际译王的命令行版。用过图形界面的翻译软件，为了快速调用就要让其常驻后台，否则每次重新打开等待受不了。即使这样从后台切到前台还是有点迟滞，就找到了小巧强大的sdcv。
 

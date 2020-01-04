@@ -4,7 +4,7 @@ title: Firefox Quantum全局快捷键
 time: 2018年03月29日 星期四
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 Firefox57后全面更换webextension扩展，其它扩展也就罢了，webextension版快捷键扩展实在无法忍受。不支持自家的网站、firefox内置页面，最难受的是页面加载完毕才可以使用，有种用油猴脚本的感觉。
 

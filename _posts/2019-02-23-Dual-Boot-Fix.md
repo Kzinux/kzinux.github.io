@@ -4,7 +4,7 @@ title: Win下双系统Grub启动修复
 time: 2019年02月23日 星期六
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

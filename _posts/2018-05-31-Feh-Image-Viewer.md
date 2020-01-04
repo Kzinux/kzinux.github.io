@@ -4,7 +4,7 @@ title: Feh图片查看器
 time: 2018年05月31日 星期四
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

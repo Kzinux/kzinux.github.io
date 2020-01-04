@@ -4,7 +4,7 @@ title: rm参数列表过长无法执行
 time: 2018年03月30日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

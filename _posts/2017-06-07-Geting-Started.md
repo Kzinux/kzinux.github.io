@@ -4,7 +4,7 @@ title: 终于还是到github写博客了
 time: 2017年06月07日 星期三
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 几年前刚开始写博客，当时流行wordpress，也跟风申请了个000webhost的免费空间搭了个wordpress。几年下来一个月多的七八篇，少的一俩篇文章写下来也挺省心的。天不遂人意，前段时间无缘无故突然把我帐号删了，空间也没了。  
 

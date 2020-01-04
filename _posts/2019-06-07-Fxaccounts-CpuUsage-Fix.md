@@ -4,7 +4,7 @@ title: 禁用Firefox同步账号导致的cpu异常占用
 time: 2019年06月07日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

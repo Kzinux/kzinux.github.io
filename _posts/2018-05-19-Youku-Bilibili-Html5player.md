@@ -4,7 +4,7 @@ title: Youku&Bilibili的Html5播放器
 time: 2018年05月19日 星期六
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

@@ -4,7 +4,7 @@ title: 合并分区及更改分区顺序
 time: 2019年11月27日 星期三
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

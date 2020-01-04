@@ -4,7 +4,7 @@ title: Linux下Firefox广告过滤之Adm
 time: 2018年11月17日 星期六
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 

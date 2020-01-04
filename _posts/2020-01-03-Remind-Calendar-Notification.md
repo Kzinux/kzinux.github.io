@@ -4,7 +4,7 @@ title: Remind日程提醒及通知「Notification」
 time: 2020年01月03日 星期五
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 日程提醒是一个常用又实用的功能，手机以及PC上都有很多实现方式。今天要介绍一下linux下一个强大的日程提醒软件Remind，以及openbox环境下系统通知的搭建和选择方案。
 

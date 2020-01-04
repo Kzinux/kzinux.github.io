@@ -4,7 +4,7 @@ title: 虚拟终端下等宽字体超标宽度字符显示
 time: 2019年12月24日 星期二
 location: 中国
 pulished: true
-excerpt_separator: "```"
+excerpt_separator: "<!--more-->"
 ---
 
 
