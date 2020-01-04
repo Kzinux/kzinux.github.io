@@ -21,46 +21,7 @@ Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不�
 2. 把index.html替换成下面的内容。
   <!--more-->
 
-  ```
-  ---
-  layout: blog_layout
-  ---
-  <!-- 遍历分页后的文章 -->
-  {% for post in paginator.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p class="author">
-  <span class="post-time">{{ post.time }}</span>
-  </p>
-      <section class="post-section">
-          <p>
-      {{ post.excerpt }}
-          </p>
-          <p class="readmore">
-              <a href="{{ post.url }}">
-                  阅读全文
-                  <span class="glyphicon glyphicon-circle-arrow-right"></span>
-              </a>
-          </p>
-      </section>
-  {% endfor %}
-  
-  <!-- 分页链接 -->
-  <div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
-  {% else %}
-  <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-  <a href="/page{{ paginator.next_page }}" class="next">Next</a>
-  {% else %}
-  <span class="next ">Next</span>
-  {% endif %}
-  </div>
-  ```
-  
-
+  github显示不全html代码，放个[index.html](https://github.com/Kzinux/kzinux.github.io/blob/master/index.html)链接。
   
 3. push到github刷新博客就生效了。
 
