@@ -18,6 +18,7 @@ excerpt_separator: "<!--more-->"
 find --set-root /bootmgr	
 chainloader /bootmgr	
 boot
+<!--more-->
 ```
 
 每行一个命令回车执行后输入下一行，倒是进去了但是没法修复，不能每次启动都这样。
@@ -28,7 +29,6 @@ boot
 
 ```bash
 grub-install --target=i386-pc /dev/sdx
-<!--more-->
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 

@@ -18,6 +18,7 @@ excerpt_separator: "<!--more-->"
 `qrencode '待编码文字' -o qrcode.png`
 
 #### 二维码解码
+<!--more-->
 
 可以使用zbar来解码二维码图片，支持图片(zbarimg)和摄像头解码(zbarcam)，也有图形界面的前端，zbar-gtk和zbar-qt。
 

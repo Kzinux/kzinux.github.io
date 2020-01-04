@@ -18,6 +18,7 @@ excerpt_separator: "<!--more-->"
 
 在2020年1月8号早上6点45分播放一首铃声提醒`REM 2020-1-8@6:45 RUN mplayer -loop 0 /path2ringtone/alarm.mp3`
 
+<!--more-->
 在周一至周五的早上六点半播放铃声提醒`REM Mon Tue Wed Thu Fri AT 6:30 RUN mplayer -loop 0 /path2ringtone/alarm.mp3` 
 
 在每天的下午2点18分发送一条通知提醒`REM AT 14:18 RUN notify-send -a Remind -i calendar -t 0 "滚滚长江东逝水"`
@@ -28,7 +29,6 @@ excerpt_separator: "<!--more-->"
 
 在每月的第一个周六上午九点半发送通知提醒`REM Sat 1 AT 9:30 RUN notify-send -a Remind -i calendar -t 0 "青山依旧在"`
 
-<!--more-->
 上面只是一些基本用法，可以将年月日以及星期组合成各种你想要的结果，就不一一介绍。
 
 

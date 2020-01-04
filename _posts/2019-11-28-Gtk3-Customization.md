@@ -18,6 +18,7 @@ excerpt_separator: "<!--more-->"
 字体颜色归gtk主题管，gtk又分为gtk2和gtk3，现在就分别修改下。
 
 #### Gtk2
+<!--more-->
 
 2的修改很简单，就是很方便的文本配置，编辑/usr/share/themes/Arc-Darker-solid/gtk-2.0下的gtkrc，把text_color和fg_color都改成心仪的字体颜色就可以了。
 
@@ -28,7 +29,6 @@ excerpt_separator: "<!--more-->"
 还有种方法就是源码重编译，干净利落。
 
 1. 首先下载github站上的[arc源码](https://github.com/arc-design/arc-theme)，git clone下来。
-<!--more-->
 
 2. 然后根据下面的介绍安装编译所需的依赖。
 
