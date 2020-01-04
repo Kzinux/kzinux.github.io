@@ -21,7 +21,7 @@ Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不�
 2. 把index.html替换成下面的内容。
   <!--more-->
 
-  ```html
+  ```
   ---
   layout: blog_layout
   ---
@@ -58,11 +58,10 @@ Github的博客写了也两年多了，虽然Jekyll立志于小巧简洁，不�
   <span class="next ">Next</span>
   {% endif %}
   </div>
-  
   ```
-
   
 
+  
 3. push到github刷新博客就生效了。
 
 #### **摘要「ReadMore」**
