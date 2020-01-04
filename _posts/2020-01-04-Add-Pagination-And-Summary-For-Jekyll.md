@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: Jekyll博客的分页和摘要
-time: 2020年1月4日 星期六
+time: 2020年01月04日 星期六
 location: 中国
 pulished: true
 excerpt_separator: "<!--more-->"
