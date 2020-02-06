@@ -59,8 +59,9 @@ echo "$1"
 跟原作者的有所不同，可能因为邮箱服务器不同导致状态栏文字也不同，根据自己情况改下。就是检测有新邮件状态栏的文字特征变化然后发送一个notification。
 
 然后在muttrc里加入下面的配置项，mutt-filter就是检测脚本的文件名。
-`set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]----%>-(%P)---'|"`
 
-
+```sh
+set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]----%>-(%P)---'|"
+```
 
 <img src="/assets/img/muttnotification.png" width="273px" />
