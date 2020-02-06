@@ -11,7 +11,7 @@ excerpt_separator: "<!--more-->"
 安装配置基本按照archwiki的[Mutt](https://wiki.archlinux.org/index.php/Mutt)页，arch的mutt默认内置收邮件imap和发邮件smtp功能。内置的imap容易断线，建议换成[offlineimap](https://wiki.archlinux.org/index.php/OfflineIMAP)。内置的smtp把我坑了一下午，邮件发送地址默认弄成了系统host，结果一直发送失败，后来换了msmtp，编辑header改了发送地址才成功了。
 
 wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineimap配置好接下来就需要配置gpg加密密码了，否则邮箱密码明文存储太危险了。如何配置上述两个wiki里都有详述。
-
+<!--more-->
 #### **offlineimap定期启动**
 
 默认offlineimap是后台静默运行的，可是容易遇到卡死。wiki里推荐了用systemd服务定期运行，而且可以设置卡死后自动杀死进程。
