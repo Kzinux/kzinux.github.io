@@ -65,3 +65,14 @@ set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Ol
 ```
 
 <img src="/assets/img/muttnotification.png" width="273px" />
+
+#### **已读邮件自动同步**
+
+mutt默认打开新邮件后并不会将已读标记同步至本地邮件，这样offlineimap同步后服务器上的邮件还是未读标记。用$快捷键绑定的<sync-mailbox>可以手动同步，可是有点麻烦。可以将打开邮件的命令<display-message>和同步命令绑定在一起，这样打开邮件的同时就同步一次。
+
+下面是绑定的打开邮件的新命令配置。
+
+```xml
+macro index,pager    <Return>  "<display-message><sync-mailbox>"                                 "open mail and sync"
+```
+
