@@ -16,7 +16,7 @@ wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineim
 
 默认offlineimap是后台静默运行的，可是容易遇到卡死。wiki里推荐了用systemd服务定期运行，而且可以设置卡死后自动杀死进程。
 
-新建编辑下面文件设置定期启动间隔，下面设置的是5分钟。
+*新建编辑下面文件设置定期启动间隔，下面设置的是5分钟。*
 
 ```
 ~/.config/systemd/user/offlineimap-oneshot.timer.d/timer.conf
@@ -25,7 +25,7 @@ wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineim
 OnUnitInactiveSec=5m
 ```
 
-这里设置的卡顿300秒后杀死，wiki里没加NotifyAccess行会导致此功能失效。
+*这里设置的卡顿300秒后杀死，wiki里没加NotifyAccess行会导致此功能失效。*
 
 ```
 ~/.config/systemd/user/offlineimap-oneshot.service.d/service.conf
@@ -35,7 +35,30 @@ WatchdogSec=300
 NotifyAccess=all
 ```
 
-#### **mutt新邮件提醒**
+------------------------------------------------------------2020/02/09-------------------------------------------------------------------
+
+用systemd启动一段时间，有次发现offlineimap又卡住了，而且watchdog也无法杀死进程。我用kill命令也无法杀死offlineimap进程，要用kill -9才能强制杀死。
+
+于是搜索了下能不能在offlineimap启动后一段时间后强制结束进程，不过似乎没有这种程序。倒是找到个博客文章解决了这个需求：[Reliable IMAP synchronization with IDLE support](https://blog.mister-muffin.de/2013/06/05/reliable-imap-synchronization-with-idle-support) 。
+
+用脚本定期每隔5分钟启动offlineimap并且一分钟后结束offlineimap，用了几天挺稳定的没遇到问题。
+
+把下面的脚本放到开机启动里就行了，我没用notmuch所以notmuch那行就不需要了。
+
+```sh
+#!/bin/sh
+#!/bin/bash
+#!/bin/zsh
+
+while true; do
+    timeout --signal=KILL 1m offlineimap
+    sleep 5m
+done
+```
+
+
+
+#### mutt新邮件提醒
 
 新邮件提醒没有很不方便，网上也找到很多实现方式，可是太复杂且依赖外部程序太多。后来在网上找到了一个用内置mutt功能实现的新邮件提醒实现方式：[利用mutt的filter实现新邮件提醒](http://adam8157.info/blog/2010/05/mutt-filter-notify/)。
 
@@ -53,7 +76,6 @@ else
 fi
 
 echo "$1"
-
 ```
 
 跟原作者的有所不同，可能因为邮箱服务器不同导致状态栏文字也不同，根据自己情况改下。就是检测有新邮件状态栏的文字特征变化然后发送一个notification。
