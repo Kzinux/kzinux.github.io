@@ -228,6 +228,8 @@ div.authorimage {
     text-align: center;
     max-width: 950px;
     margin: auto;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
     color: #f0f0f0;
     background-color: #575757;
     background-color: rgba(51, 123, 181, 0.6);
