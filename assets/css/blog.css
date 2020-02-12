@@ -55,11 +55,9 @@
 }
 
 nav {
-  border-bottom: 1px solid #ecf0f1;
-  border-top: 1px solid #ecf0f1;
   margin-bottom: 2em;
   text-align: center;
-  max-width: 950px;
+  display: inline-block;
   /*margin: 20px auto 2em auto;*/
 }
 
