@@ -14,7 +14,7 @@ set guiheadroom=0
 
 不过底部最近又出现了一条白线，跟以前的空白比起来小多了，不过还是挺碍眼。
 
-"<!--more-->"
+<!--more-->
 
 找了找解决方案，有用插件的，还有用gtk.css的。到vim的github页的issue看了下[相关讨论](https://github.com/vim/vim/issues/349)，下面有解决办法。不过最后那位老兄说得在理，gvim应该自己解决这个问题，而不是让使用者动手。
 
