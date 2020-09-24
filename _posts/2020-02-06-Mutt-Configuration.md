@@ -12,6 +12,7 @@ excerpt_separator: "<!--more-->"
 
 wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineimap配置好接下来就需要配置gpg加密密码了，否则邮箱密码明文存储太危险了。如何配置上述两个wiki里都有详述。
 <!--more-->
+
 #### **offlineimap定期启动**
 
 默认offlineimap是后台静默运行的，可是容易遇到卡死。wiki里推荐了用systemd服务定期运行，而且可以设置卡死后自动杀死进程。
@@ -72,7 +73,7 @@ done
 #!/bin/sh
 
 if [[ "$1" =~ "Inbox" && "$1" =~ "New:" ]];then
-	notify-send -a mutt -i gmail -t 0 'Mutt' 'New mail arrived.                 '
+	notify-send -a mutt -i gmail 'Mutt' 'New mail arrived.                 '
 else
 	printf "\ekmutt\e\\" > /dev/tty
 fi
@@ -89,6 +90,16 @@ set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Ol
 ```
 
 <img src="/assets/img/muttnotification.png" width="273px" />
+
+---------------2020-09-24---------------------
+
+发现邮件多了每个notification都要手动取消很麻烦，但是如果让它自动消失，因为我没装状态栏所以会错过邮件提醒。记得conky里有邮件的相关变量，打开manpage果然有，而且很多，邮件总数、新邮件、垃圾邮件、已发送邮件等等。这里我只需要新邮件数变量，根据manpage加入如下变量即可，还可以设置更新频率。
+
+```sh
+${new_mails ${HOME}/.mutt/cache/mail/Inbox}
+```
+
+<img src="/assets/img/conky-mail.png" width="545px" />
 
 #### **已读邮件自动同步**
 
