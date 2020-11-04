@@ -16,6 +16,8 @@ excerpt_separator: "<!--more-->"
 
 新邮件提醒系统依赖offlineimap同步的本地邮件实现，用inotify-tools的inotifywait命令监控邮件目录写入，从而实时弹出邮件提醒通知。通知功能网上找的几个脚本参考融合了下，邮件标题和发件人提取用notmuch实现。
 
+###### Jekyll默认不支持流程图，按照这篇文章[Embed Mermaid Charts in Jekyll without Plugin](http://kkpattern.github.io/2015/05/15/Embed-Chart-in-Jekyll.html)启用mermaid支持流程图。
+
 
 <div class="mermaid">
 graph LR;
