@@ -108,7 +108,7 @@ for filename in argv[1:]:
 # MAGIC WITH SHITTY REGEXES
 while true; do
 	# watch for changes in folder
-	NOTIFY=`inotifywait -e create -e moved_to ${MAILBOX}/mail/INBOX/new ${MAILBOX}/mail/Junk/new 2> /dev/null`
+	NOTIFY=`inotifywait -e create -e moved_to ${MAILBOX}/mail/INBOX/new 2> /dev/null`
 	
 	# sed out stuff (folder name and file path) from inotifywait output and create popup
     notmuch new
@@ -121,4 +121,6 @@ done
 
 这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。当然这个邮件监控脚本也要后台开着。
 
-​	
+另外就是有时人离开没看到邮件通知会错过，这时可以用conky内置邮件计数功能来显示新邮件数。conky支持本地邮件计数，新邮件、垃圾邮件和邮件总数什么的都支持，我就显示了主邮箱新邮件数和垃圾邮箱新邮件数。
+
+<img src="/assets/img/conky-mail.png" width="820px" />

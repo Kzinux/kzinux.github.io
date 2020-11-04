@@ -99,7 +99,7 @@ set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Ol
 ${new_mails ${HOME}/.mutt/cache/mail/Inbox}
 ```
 
-<img src="/assets/img/conky-mail.png" width="545px" />
+<img src="/assets/img/conky-mail.png" width="820px" />
 
 #### **已读邮件自动同步**
 
