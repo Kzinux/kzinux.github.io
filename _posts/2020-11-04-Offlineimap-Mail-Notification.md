@@ -18,18 +18,18 @@ excerpt_separator: "<!--more-->"
 
 
 <div class="mermaid">
-graph LR;
-A[邮件服务器] -->|Offlineimap|B(本地文件);
-    B --> C[ionotifywait监控写入];
-    C -->|新的写入| D[通知Notification];
-    C -->|新的写入| E[Notmuch更新数据库];
-    E -->|提供邮件标题和发件人| D;
+graph LR
+A[邮件服务器] -->|Offlineimap|B(本地文件)
+    B --> C[ionotifywait监控写入]
+    C -->|新的写入| D[通知Notification]
+    C -->|新的写入| E[Notmuch更新数据库]
+    E -->|提供邮件标题和发件人| D
 </div>
 
+<!--more-->
 
 <img src="/assets/img/MailNotification.png" width="540px" />
 
-<!--more-->
 
 本地的邮件使用特殊的编码写的，直接提取标题和发件人如果包含中文就会乱码。要找个能提取邮件标题和发件人的工具，现成的工具很多都是针对英文邮件不适用于中文。后来找到个python脚本可以，提取邮件标题脚本如下。
 
