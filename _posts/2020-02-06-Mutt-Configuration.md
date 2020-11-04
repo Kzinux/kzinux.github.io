@@ -63,11 +63,11 @@ done
 
 #### **mutt新邮件提醒**
 
-新邮件提醒没有很不方便，网上也找到很多实现方式，可是太复杂且依赖外部程序太多。后来在网上找到了一个用内置mutt功能实现的新邮件提醒实现方式：[利用mutt的filter实现新邮件提醒](http://adam8157.info/blog/2010/05/mutt-filter-notify/)。
+~~新邮件提醒没有很不方便，网上也找到很多实现方式，可是太复杂且依赖外部程序太多。后来在网上找到了一个用内置mutt功能实现的新邮件提醒实现方式：[利用mutt的filter实现新邮件提醒](http://adam8157.info/blog/2010/05/mutt-filter-notify/)。~~
 
-链接里的博文介绍得很清楚了，下面搬运过来。
+~~链接里的博文介绍得很清楚了，下面搬运过来。~~
 
-首先在bin下「比如/usr/local/bin」新建一个脚本，将下面内容复制进去
+~~首先在bin下「比如/usr/local/bin」新建一个脚本，将下面内容复制进去~~
 
 ```sh
 #!/bin/sh
@@ -81,15 +81,21 @@ fi
 echo "$1"
 ```
 
-跟原作者的有所不同，可能因为邮箱服务器不同导致状态栏文字也不同，根据自己情况改下。就是检测有新邮件状态栏的文字特征变化然后发送一个notification。
+~~跟原作者的有所不同，可能因为邮箱服务器不同导致状态栏文字也不同，根据自己情况改下。就是检测有新邮件状态栏的文字特征变化然后发送一个notification。~~
 
-然后在muttrc里加入下面的配置项，mutt-filter就是检测脚本的文件名。
+~~然后在muttrc里加入下面的配置项，mutt-filter就是检测脚本的文件名。~~
 
 ```sh
 set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]----%>-(%P)---'|"
 ```
 
 <img src="/assets/img/muttnotification.png" width="273px" />
+
+----------------------2020-11-03------------------------
+
+邮件提醒系统已换——[Offlineimap实现后台邮件提醒](https://kzinux.github.io/2020/11/04/Offlineimap-Mail-Notification.html)。
+
+<img src="/assets/img/MailNotification.png" width="536px" />
 
 ---------------2020-09-24---------------------
 
@@ -103,11 +109,14 @@ ${new_mails ${HOME}/.mutt/cache/mail/Inbox}
 
 #### **已读邮件自动同步**
 
-mutt默认打开新邮件后并不会将已读标记同步至本地邮件，这样offlineimap同步后服务器上的邮件还是未读标记。用$快捷键绑定的sync-mailbox可以手动同步，可是有点麻烦。可以将打开邮件的命令display-message和同步命令绑定在一起，这样打开邮件的同时就同步一次。
+~~mutt默认打开新邮件后并不会将已读标记同步至本地邮件，这样offlineimap同步后服务器上的邮件还是未读标记。用$快捷键绑定的sync-mailbox可以手动同步，可是有点麻烦。可以将打开邮件的命令display-message和同步命令绑定在一起，这样打开邮件的同时就同步一次。~~
 
-下面是绑定的打开邮件的新命令配置。
+~~下面是绑定的打开邮件的新命令配置。~~
 
 ```xml
 macro index,pager    <Return>  "<display-message><sync-mailbox>"                                 "open mail and sync"
 ```
 
+----------------------2020-11-03------------------------
+
+绑定同步本地邮件命令到回车键导致每次打开邮件都卡一下，还是换回默认的，退出mutt会自动同步或者按$手动同步。
