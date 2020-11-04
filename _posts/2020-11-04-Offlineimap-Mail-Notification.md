@@ -18,7 +18,7 @@ excerpt_separator: "<!--more-->"
 
 
 <div class="mermaid">
-graph TD;
+graph LR;
 A[邮件服务器] -->|Offlineimap|B(本地文件);
     B --> C[ionotifywait监控写入];
     C -->|新的写入| D[通知Notification];
