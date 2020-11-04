@@ -26,7 +26,7 @@ A[邮件服务器] -->|Offlineimap|B(本地文件)
     E -->|提供邮件标题和发件人| D
 ```
 
-<img src="/assets/img/MailNotification.png" width="536px" />
+<img src="/assets/img/MailNotification.png" width="540px" />
 
 <!--more-->
 
