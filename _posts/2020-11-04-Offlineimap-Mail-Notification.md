@@ -4,7 +4,6 @@ title: Offlineimap实现后台邮件提醒
 time: 2020年11月04日 星期三
 location: 中国
 pulished: true
-mermaid: true
 excerpt_separator: "<!--more-->"
 
 ---
@@ -17,13 +16,15 @@ excerpt_separator: "<!--more-->"
 
 新邮件提醒系统依赖offlineimap同步的本地邮件实现，用inotify-tools的inotifywait命令监控邮件目录写入，从而实时弹出邮件提醒通知。通知功能网上找的几个脚本参考融合了下，邮件标题和发件人提取用notmuch实现。
 
-```mermaid
+```
+<div class="mermaid">
 graph LR
 A[邮件服务器] -->|Offlineimap|B(本地文件)
     B --> C[ionotifywait监控写入]
     C -->|新的写入| D[通知Notification]
     C -->|新的写入| E[Notmuch更新数据库]
     E -->|提供邮件标题和发件人| D
+</div>
 ```
 
 <img src="/assets/img/MailNotification.png" width="540px" />
@@ -120,3 +121,4 @@ done
 
 这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。
 
+​	
