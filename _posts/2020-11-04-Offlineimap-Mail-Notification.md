@@ -18,12 +18,12 @@ excerpt_separator: "<!--more-->"
 
 
 <div class="mermaid">
-graph LR
-A[邮件服务器] -->|Offlineimap|B(本地文件)
-    B --> C[ionotifywait监控写入]
-    C -->|新的写入| D[通知Notification]
-    C -->|新的写入| E[Notmuch更新数据库]
-    E -->|提供邮件标题和发件人| D
+graph LR;
+A[邮件服务器] -->|Offlineimap|B(本地文件);
+    B --> C[ionotifywait监控写入];
+    C -->|新的写入| D[通知Notification];
+    C -->|新的写入| E[Notmuch更新数据库];
+    E -->|提供邮件标题和发件人| D;
 </div>
 
 <!--more-->
@@ -119,6 +119,6 @@ done
 
 ```
 
-这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。
+这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。当然这个邮件监控脚本也要后台开着。
 
 ​	
