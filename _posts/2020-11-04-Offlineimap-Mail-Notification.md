@@ -4,6 +4,7 @@ title: Offlineimap实现后台邮件提醒
 time: 2020年11月04日 星期三
 location: 中国
 pulished: true
+mermaid: true
 excerpt_separator: "<!--more-->"
 
 ---
