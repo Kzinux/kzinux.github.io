@@ -28,7 +28,7 @@ A[邮件服务器] -->|Offlineimap|B(本地文件);
 
 <!--more-->
 
-<img src="/assets/img/MailNotification.png" width="540px" />
+<img src="/assets/img/MailNotification.png" width="536px" />
 
 
 本地的邮件使用特殊的编码写的，直接提取标题和发件人如果包含中文就会乱码。要找个能提取邮件标题和发件人的工具，现成的工具很多都是针对英文邮件不适用于中文。后来找到个python脚本可以，提取邮件标题脚本如下。
