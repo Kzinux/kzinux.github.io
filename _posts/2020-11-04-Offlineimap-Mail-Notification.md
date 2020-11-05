@@ -14,6 +14,8 @@ excerpt_separator: "<!--more-->"
 2. 依据mutt状态栏实现的，只要状态栏有new即未读邮件，那么每次更新邮件状态都会弹出提醒;
 3. mutt要开着，也算个小缺点，虽然mutt占用很小。
 
+### **通知弹窗**
+
 新邮件提醒系统依赖offlineimap同步的本地邮件实现，用inotify-tools的inotifywait命令监控邮件目录写入，从而实时弹出邮件提醒通知。通知功能网上找的几个脚本参考融合了下，邮件标题和发件人提取用notmuch实现。
 
 <div class="mermaid">
@@ -116,10 +118,13 @@ while true; do
     SUBJECT=`notmuch search --sort=newest-first --limit=1 --output=summary '*unread*' | cut -d';' -f2`
 	notify-send -a Offlineimap -i trojita -t $TIMOUT "Offlineimap" "From: $FROM\n$SUBJECT" 
 done
+状态栏邮件计数
 
 ```
 
 这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。当然这个邮件监控脚本也要后台开着。
+
+### **状态栏邮件计数**
 
 另外就是有时人离开没看到邮件通知会错过，这时可以用conky内置邮件计数功能来显示新邮件数。conky支持本地邮件计数，新邮件、垃圾邮件和邮件总数什么的都支持，我就显示了主邮箱新邮件数和垃圾邮箱新邮件数。
 
