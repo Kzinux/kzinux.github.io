@@ -30,7 +30,7 @@ A[邮件服务器] -->|Offlineimap|B(本地邮件);
 
 ###### Jekyll默认不支持流程图，按照这篇文章[Embed Mermaid Charts in Jekyll without Plugin](http://kkpattern.github.io/2015/05/15/Embed-Chart-in-Jekyll.html)启用mermaid支持流程图。
 
-<img src="/assets/img/MailNotification.png" width="536px" />
+<img src="/assets/img/MailNotification.png" width="532px" />
 
 
 本地的邮件使用特殊的编码写的，直接提取标题和发件人如果包含中文就会乱码。要找个能提取邮件标题和发件人的工具，现成的工具很多都是针对英文邮件不适用于中文。后来找到个python脚本可以，提取邮件标题脚本如下。
@@ -118,7 +118,6 @@ while true; do
     SUBJECT=`notmuch search --sort=newest-first --limit=1 --output=summary '*unread*' | cut -d';' -f2`
 	notify-send -a Offlineimap -i trojita -t $TIMOUT "Offlineimap" "From: $FROM\n$SUBJECT" 
 done
-状态栏邮件计数
 
 ```
 
