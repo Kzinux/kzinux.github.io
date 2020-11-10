@@ -120,12 +120,16 @@ while true; do
 	
 	# sed out stuff (folder name and file path) from inotifywait output and create popup
     notmuch new
-    FROM=`notmuch search --sort=newest-first --limit=1 --output=summary '*unread*' | cut -d';' -f1|cut -d']' -f 2`
-    SUBJECT=`notmuch search --sort=newest-first --limit=1 --output=summary '*unread*' | cut -d';' -f2`
+    FILE=`echo $NOTIFY | sed -r "s/(.*?\/) .*? (.*)/\1\2/"`
+    NUM=`notmuch search --sort=newest-first  --output=files '*unread*'|grep -n $FILE|sed -r "s/^([0-9]+):.*/\1/"`
+    FROM=`notmuch search --sort=newest-first  --output=summary '*unread*'|head -$NUM |tail -1| cut -d';' -f1|cut -d']' -f 2`
+    SUBJECT=`notmuch search --sort=newest-first  --output=summary '*unread*'|head -$NUM |tail -1| cut -d';' -f2 | sed -r "s/^\s(.*)$/\1/"`
 	notify-send -a Offlineimap -i trojita -t $TIMOUT "Offlineimap" "From: $FROM\n$SUBJECT" 
 done
 
 ```
+
+Notmuch不支持文件名搜索挺麻烦的，用了迂回的方法实现了文件名和notmuch邮件条目之间的联系。其实直接取最新的邮件条目也可以，文件名匹配更精准。
 
 这样当有新邮件时就会弹窗提醒，而且不依赖邮件客户端，只要后台开着offlineimap同步邮件即可。当然这个邮件监控脚本也要后台开着。
 
