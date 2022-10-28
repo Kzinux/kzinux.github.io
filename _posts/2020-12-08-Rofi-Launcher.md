@@ -19,3 +19,9 @@ Windows下启动器用的是[Listary](https://www.listary.com/)，反应快速�
 rofi内置了很多主题，可以用rofi-theme-selector选择，作者也收集了一些[用户贡献的主题](https://github.com/davatorium/rofi-themes/tree/master/User%20Themes)，目前用的就是里面的flat-orange修改的。因为前面的版本只能统一设置一个字体和字号，导致外观主题主次不明。像上面的listary用户输入和结果输出使用不同的字号，层次就分明多了。不过rofi最新的版本可以让各部分使用不同的字体和字号，把主题文件里的prompt和entry字号修改后顺眼多了。
 
 <img src="/assets/img/rofi.png" width="672px" />
+
+------------------------2022/10/28---------------------------
+
+原始配色用久腻了，换了黑红色调的新搭配。
+
+<img src="/assets/img/rofi-newtheme.png" width="768px" />
