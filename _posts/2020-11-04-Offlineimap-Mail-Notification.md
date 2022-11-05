@@ -30,7 +30,7 @@ A[邮件服务器] -->|Offlineimap|B(本地邮件);
 
 ###### Jekyll默认不支持流程图，按照这篇文章[Embed Mermaid Charts in Jekyll without Plugin](http://kkpattern.github.io/2015/05/15/Embed-Chart-in-Jekyll.html)启用mermaid支持流程图。
 
-<img src="/assets/img/MailNotification.png" width="333px" />
+<img src="/assets/img/MailNotification.png" width="631px" />
 
 
 本地的邮件使用特殊的编码写的，直接提取标题和发件人如果是编码过的就会显示一堆编码。要找个能提取邮件标题和发件人的工具，现成的工具大都直接提取文本，但是纯文本的邮件很少，邮件大部分都是编码的，常见比如rfc2047，还有base64之类的。

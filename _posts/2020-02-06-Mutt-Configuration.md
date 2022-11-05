@@ -127,7 +127,7 @@ set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Ol
 
 邮件提醒系统已换——[Offlineimap实现后台邮件提醒](https://kzinux.github.io/2020/11/04/Offlineimap-Mail-Notification.html)。
 
-<img src="/assets/img/MailNotification.png" width="333px" />
+<img src="/assets/img/MailNotification.png" width="631px" />
 
 ---------------2020-09-24---------------------
 
