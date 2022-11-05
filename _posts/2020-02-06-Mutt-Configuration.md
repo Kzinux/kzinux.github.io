@@ -13,6 +13,42 @@ excerpt_separator: "<!--more-->"
 wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineimap配置好接下来就需要配置gpg加密密码了，否则邮箱密码明文存储太危险了。如何配置上述两个wiki里都有详述。
 <!--more-->
 
+----------------------2022/11/05-------------------------
+
+#### Gpg密码加密
+
+把gpg密码加密记录下，有段时间了都快忘了。这里分为两个部分，mutt和offlineimap的密码加密，mutt需要密码发邮件，offlineimap要同步下载新邮件。
+
+##### offlineimap
+
+1. 首先在~/.offlineimap下新建个GPGdecrypt.py文件，内容如下，pass.gpg是事先加密好的邮箱密码或者授权码
+
+   ```python
+   from subprocess import check_output
+   def get_pass():
+       return check_output("gpg -dq ~/.offlineimap/pass.gpg", shell=True).splitlines()[0]
+   ```
+
+   
+
+2. 编辑.offlineimaprc将pythonfile=项设置为上面py文件的路径地址
+
+3. 编辑.offlineimaprc设置`remotepasseval = get_pass()`
+
+##### mutt
+
+1. 在.mutt下新建一个文件mypass.txt，内容如下，双引号中间填入邮箱密码或者授权码
+
+   `set my_pass = ""`
+
+2. gpg加密生成加密文件，重命名为mypass.gpg
+
+3. 编辑muttrc，加入这一行
+
+   `source "gpg -dq $HOME/.mutt/mypass.gpg |"`
+
+4. 编辑muttrc，设置 `set smtp_pass="$my_pass"`
+
 #### **offlineimap定期启动**
 
 默认offlineimap是后台静默运行的，可是容易遇到卡死。wiki里推荐了用systemd服务定期运行，而且可以设置卡死后自动杀死进程。
@@ -95,7 +131,7 @@ set status_format="mutt-filter '-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Ol
 
 邮件提醒系统已换——[Offlineimap实现后台邮件提醒](https://kzinux.github.io/2020/11/04/Offlineimap-Mail-Notification.html)。
 
-<img src="/assets/img/MailNotification.png" width="536px" />
+<img src="/assets/img/MailNotification.png" width="333px" />
 
 ---------------2020-09-24---------------------
 
