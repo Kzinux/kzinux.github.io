@@ -37,15 +37,11 @@ wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineim
 
 ##### **mutt**
 
-1. 在.mutt下新建一个文件mypass.txt，内容如下，双引号中间填入邮箱密码或者授权码
-
-   `set my_pass = ""`
+1. 在.mutt下新建一个文件mypass.txt，内容如下，双引号中间填入邮箱密码或者授权码`set my_pass = ""`
 
 2. gpg加密生成加密文件，重命名为mypass.gpg
 
-3. 编辑muttrc，加入这一行
-
-   `source "gpg -dq $HOME/.mutt/mypass.gpg |"`
+3. 编辑muttrc，加入这一行`source "gpg -dq $HOME/.mutt/mypass.gpg |"`
 
 4. 编辑muttrc，设置 `set smtp_pass="$my_pass"`
 
