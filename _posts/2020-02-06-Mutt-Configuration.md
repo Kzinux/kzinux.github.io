@@ -15,11 +15,11 @@ wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineim
 
 ----------------------2022/11/05-------------------------
 
-#### Gpg密码加密
+#### **Gpg密码加密**
 
 把gpg密码加密记录下，有段时间了都快忘了。这里分为两个部分，mutt和offlineimap的密码加密，mutt需要密码发邮件，offlineimap要同步下载新邮件。
 
-##### offlineimap
+##### **offlineimap**
 
 1. 首先在~/.offlineimap下新建个GPGdecrypt.py文件，内容如下，pass.gpg是事先加密好的邮箱密码或者授权码
 
@@ -35,7 +35,7 @@ wiki里的内容这里不再赘述，这里就做一下补充。mutt和offlineim
 
 3. 编辑.offlineimaprc设置`remotepasseval = get_pass()`
 
-##### mutt
+##### **mutt**
 
 1. 在.mutt下新建一个文件mypass.txt，内容如下，双引号中间填入邮箱密码或者授权码
 
