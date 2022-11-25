@@ -17,4 +17,4 @@ Acessibility是盲人无障碍服务，用不上却不停跳出来就很困扰�
 刷新网页再用alt 1快捷键就不会唤起无障碍工具条了。
 redirecotr还挺厉害的，本来想把reddit网页快捷键冲突也解决了，但是reddit网页太垃圾了，一堆js导致网页卡顿臃肿缓慢。 用redirector把reddit都转到np.reddit.com去，功能上没区别但是流畅很多，就是界面难看排版太烂，自己写了点css改成紧凑舒服的样式。
 
-2. 然后就是最近遇到的终端启动图形界面刷刷一堆at-spi报错，类似`AT-SPI: Could not obtain desktop path or name`这种错误信息刷屏。解决方法很简单，禁用无障碍服务，把下面代码加到/etc/enviroment里`NO_AT_BRIDGE=1`，重新登录系统使设置生效，再打开图形程序就没错误信息了。
+2. 然后就是最近遇到的终端启动图形界面刷刷一堆at-spi报错，类似`AT-SPI: Could not obtain desktop path or name`这种错误信息刷屏。解决方法很简单，禁用无障碍服务，把下面代码加到/etc/enviroment里`NO_AT_BRIDGE=1`重新登录系统使设置生效，再打开图形程序就没错误信息了。
