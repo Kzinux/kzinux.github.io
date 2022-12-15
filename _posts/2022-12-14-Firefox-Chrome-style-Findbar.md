@@ -15,15 +15,21 @@ Firefox的查找栏外观还是Firefox3时代的老古董，虽然功能吸收�
 对于要改成什么样是有底的，chromium那个查找栏简洁大方，照着改就成。不过firefox的查找栏功能比chrome的强大，没必要削足适履。成品还是很满意的，外观简洁又保留了firefox查找栏的全部功能。
 * 默认打开状态
 
-<img src="/assets/img/finbar1.png" width="596px" />
+<img src="/assets/img/finbar1.png" width="583px" />
 
 * 查找匹配状态
 
-<img src="/assets/img/finbar2.png" width="775px" />
+<img src="/assets/img/finbar2.png" width="756px" />
 
 * 查找失败状态
 
-<img src="/assets/img/finbar3.png" width="717px" />
+<img src="/assets/img/finbar3.png" width="690px" />
 
+* 快速查找栏
 
+<img src="/assets/img/finbar4.png" width="294px" />
+
+<img src="/assets/img/finbar5.png" width="465px" />
+
+<img src="/assets/img/finbar6.png" width="299px" />
 
