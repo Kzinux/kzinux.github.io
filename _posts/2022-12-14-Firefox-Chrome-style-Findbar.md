@@ -15,21 +15,27 @@ Firefox的查找栏外观还是Firefox3时代的老古董，虽然功能吸收�
 对于要改成什么样是有底的，chromium那个查找栏简洁大方，照着改就成。不过firefox的查找栏功能比chrome的强大，没必要削足适履。成品还是很满意的，外观简洁又保留了firefox查找栏的全部功能。
 * 默认打开状态
 
-<img src="/assets/img/findbar1.png" width="583px" />
+<img src="/assets/img/findbar1.png" width="363px" />
 
 * 查找匹配状态
 
-<img src="/assets/img/findbar2.png" width="756px" />
+<img src="/assets/img/findbar2.png" width="523px" />
 
 * 查找失败状态
 
-<img src="/assets/img/findbar3.png" width="690px" />
+<img src="/assets/img/findbar3.png" width="460px" />
 
 * 快速查找栏
 
-<img src="/assets/img/findbar4.png" width="294px" />
+<img src="/assets/img/findbar4.png" width="298px" />
 
-<img src="/assets/img/findbar5.png" width="465px" />
+<img src="/assets/img/findbar5.png" width="458px" />
 
 <img src="/assets/img/findbar6.png" width="299px" />
 
+
+用了几天觉得“高亮”那4个设置项摆那太浪费空间了，把它们设置成隐藏式的，既保留了功能又不浪费空间。
+
+鼠标点击查找栏不放2秒钟就会弹出设置项，这时可以更改查阅，2秒钟内如果没有动作就会恢复缩回去。
+
+<img src="/assets/img/findbar-settings.gif" width="703px" />
