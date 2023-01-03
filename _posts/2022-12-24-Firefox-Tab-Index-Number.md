@@ -11,12 +11,12 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
 
 标签页数字索引很多扩展都提供这个功能，扩展中心搜索“tab number”好多此类扩展，不过我记得有css可以实现类似功能。搜索了下果然有，利用::before在标签页标题前面加数字索引。
 
-不过直接加数字在前面很难看，参考了下此类扩展的实现方式，自己改了改样式，固定的标签页不显示序号也不计入序列，这样融入原有界面不会显得突兀。
+不过直接加数字在前面很难看，参考了下此类扩展的实现方式，自己改了改样式，固定的标签页不显示序号但是计入序列，这样融入原有界面不会显得突兀。
 
-<img src="/assets/img/tabindex.png" width="865px" />
+<img src="/assets/img/tabindex.png" width="776px" />
 
 ```
-.tabbrowser-tab[first-visible-unpinned-tab]{
+.tabbrowser-tab:first-child{
   counter-reset: nth-tab 0;
 }
 .tab-text:before{
