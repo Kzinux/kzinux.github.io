@@ -38,4 +38,4 @@ Firefox的查找栏外观还是Firefox3时代的老古董，虽然功能吸收�
 
 鼠标点击查找栏不放2秒钟就会弹出设置项，这时可以更改查阅，2秒钟内如果没有动作就会恢复缩回去。
 
-<img src="/assets/img/findbar-settings.gif" width="703px" />
+<img src="/assets/img/findbar-settings.gif" width="719px" />
