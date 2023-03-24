@@ -9,13 +9,9 @@ excerpt_separator: "<!--more-->"
 Firefox之前的photon主题的气泡菜单挺精致的，后面改成了平平无奇的圆角普通菜单。花时间用css把气泡菜单弄回来了，气泡箭头自适应变换方向。
 <!--more-->
 
-正常情况下菜单
+正常情况下菜单，下方空间不足是菜单朝上
 
-<img src="/assets/img/Appmenu-down.png" width="410px" />
-
-下方空间不足是菜单朝上
-
-<img src="/assets/img/Appmenu-up.png" width="410px" />
+<img src="/assets/img/ArrowPanel.png" width="780px" />
 
 ```
 /*菜单圆角改直角*/
