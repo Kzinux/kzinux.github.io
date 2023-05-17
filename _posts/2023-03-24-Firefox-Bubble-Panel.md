@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: Firefox气泡菜单
-time: 2023年3月24日 星期五
+time: 2023年03月24日 星期五
 location: 中国
 pulished: true
 excerpt_separator: "<!--more-->"
