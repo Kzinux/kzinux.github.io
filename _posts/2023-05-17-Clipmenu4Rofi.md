@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 剪贴板工具Clipmenu
-time: 2023年5月17日 星期三
+time: 2023年05月17日 星期三
 location: 中国
 pulished: true
 excerpt_separator: "<!--more-->"
@@ -13,11 +13,11 @@ Copyq用了挺长时间的，然后开始出现复制失败和粘贴失效的情
 
 clipmenu以前也试用过，依托于dmenu的，界面和功能一般。现在也支持rofi，rofi界面和功能比dmenu强大美观多了，就想着把clipmenu折腾成想要的样子。
 
-1) 安装
+**1) 安装**
 
 clipmenu安装直接pacman，依赖dmenu和可选的rofi。
 
-2) 配置
+**2) 配置**
 
 clipmenu配置参数通过环境变量实现，clipmenu --help和clipmenud --help分别对应各自的定制变量。
 
@@ -35,17 +35,17 @@ clipmenu端配置好了就可以启动后台进程clipmenud，启动后会实时
 
 接下来是前端rofi这边的配置。
 
-- [ ] 首先是快捷键呼出
+- [ ] **首先是快捷键呼出**
 
 在对应桌面的快捷键设置里给clipmenu设置一个快捷键，默认prompt显示dmenu，可以加-p定制prompt。
-
 `clipmenu -p clipmenu`
 
-- [ ] 条目增加序号
+- [ ] **条目增加序号**
 
 rofi支持菜单序号但是默认没启用，在rofi主题里增加下面内容启用序号。
 
-```/*菜单条目增加序号*/
+```
+/*菜单条目增加序号*/
 element { 
     children: [element-index, element-text, element-icon ]; 
 }
@@ -58,7 +58,7 @@ element-index {
 }
 ```
 
-- [ ] 快捷键选择条目
+- [ ] **快捷键选择条目**
 
 rofi默认支持，win键+序号就可以选择对应条目，更习惯用alt 1在rofi配置文件里改下就可以了。
 
