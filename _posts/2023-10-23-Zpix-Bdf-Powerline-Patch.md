@@ -32,7 +32,7 @@ excerpt_separator: "<!--more-->"
 
 为了与zpix.ttf共存需要改下名字。
 1. 菜单栏-元素-字体信息
-2. 前三栏都改掉，比如“Zpix P”、“Zpix P”、Zpix Powerline
+2. 前三栏都改掉，比如“ZpixP”、“ZpixP”、Zpix Powerline
 3. 确定
 4. 生成新的bdf字体，菜单栏-文件-生成字体，弹出的窗口已经选好了“无轮廓字体”、“BDF”、“12”等
 5. 点击“Generate”，分辨率默认75，确定就生成了
