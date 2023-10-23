@@ -27,6 +27,7 @@ excerpt_separator: "<!--more-->"
 首先要解决的将zpix改成等宽适应终端显示，用[Terminus Powerline版](https://github.com/powerline/fonts/tree/master/Terminus/BDF)的拉丁文点阵覆盖zpix，用等宽西文覆盖zpix后在alacritty下使用就没问题了。注意只需要下载12px的常规体就可以因为zpix没有其他字号点阵也没有粗体点阵。
 1. 用fontforge打开zpix.bdf
 2. 文件-导入-选择ter-powerline-x12n.bdf-确定overwrite
+
 - [ 2 ] 修改命名
 
 为了与zpix.ttf共存需要改下名字。
@@ -35,6 +36,7 @@ excerpt_separator: "<!--more-->"
 3. 确定
 4. 生成新的bdf字体，菜单栏-文件-生成字体，弹出的窗口已经选好了“无轮廓字体”、“BDF”、“12”等
 5. 点击“Generate”，分辨率默认75，确定就生成了
+
 - [ 3 ] powerline字符支持
 
 在fontforge里乱折腾了一阵都失败了箭头字符始终位置不对与左侧有空隙，后来在自己保存git clone文件夹内发现个fontpatch才想起来当初是用脚本自动patch的。但是几年前的python2版本现在arch都是python3了又去找了个新的[Font-patch脚本](https://github.com/alexandermckay/font-patcher)。
