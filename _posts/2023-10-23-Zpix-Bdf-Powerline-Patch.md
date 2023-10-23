@@ -41,9 +41,7 @@ excerpt_separator: "<!--more-->"
 
 在fontforge里乱折腾了一阵都失败了箭头字符始终位置不对与左侧有空隙，后来在自己保存git clone文件夹内发现个fontpatch才想起来当初是用脚本自动patch的。但是几年前的python2版本现在arch都是python3了又去找了个新的[Font-patch脚本](https://github.com/alexandermckay/font-patcher)。
 
-脚本下载下来之后对上面生成的bdf字体执行如下命令就可以生成patch字体了。
-
-`fontforge -script 脚本的路径 字体的路径`
+脚本下载下来之后对上面生成的bdf字体执行如下命令就可以生成patch字体了。`fontforge -script 脚本的路径 字体的路径`
 
 - **[ 4 ] 程序识别使用**
 
