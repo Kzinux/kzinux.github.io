@@ -13,7 +13,7 @@ excerpt_separator: "<!--more-->"
 
 本来想更新下，ttf用在网页上正常。bdf安装后firefox字体列表里有却无法使用，不管是内置的字体设置或是用css指定都没反应，alacritty设置成bdf版倒是有效但是字体宽度有问题。之前用的bdf版是修改过的alacritty和firefox都可以正常使用，连vim和zsh的prompt的powerline字体支持都有，但是时间太久我都忘了当初怎么改的。
 
-本来打算放弃了就用旧版的不升级了，忽然灵光一现想起来似乎是用fontfrge整合terminus的powerline版本实现的。一翻折腾下又走了不少弯路终于想起来全过程重新修改patch了zpix。这中间的问题弯路和解决方法都记录下来。
+都打算放弃了就用旧版的不升级了，忽然灵光一现想起来似乎是用fontfrge整合terminus的powerline版本实现的。一翻折腾下又走了不少弯路终于想起来全过程重新修改patch了zpix。这中间的问题弯路和解决方法都记录下来。
 
 + zpix的bdf版不知是什么问题无法在终端之外的程序使用
 + 在终端内使用字体之间的左右间隙比较大因为它不是等宽字体
