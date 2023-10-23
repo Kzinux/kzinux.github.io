@@ -43,9 +43,7 @@ excerpt_separator: "<!--more-->"
 
 脚本下载下来之后对上面生成的bdf字体执行如下命令就可以生成patch字体了。
 
-```
-fontforge -script 脚本的路径 字体的路径
-```
+`fontforge -script 脚本的路径 字体的路径`
 
 - **[ 4 ] 程序识别使用**
 
