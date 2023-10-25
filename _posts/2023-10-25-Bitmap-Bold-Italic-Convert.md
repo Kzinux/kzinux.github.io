@@ -17,15 +17,15 @@ wezterm官网上设置选项繁多，没那个需求就设置了字体和colorsc
 - 最靠谱的就是用fontforge基于zpix常规点阵制作粗体点阵，但是elements-style这类都是面向矢量字体不支持点阵
 - 既然freetype能生成假粗体能否导出保存下来，搜索了下没找到方法，可行性挺高的
 
-接下来用"bitmap bold font"之类的关键字搜索无意中打开一个支持粗体的自制点阵西文字体[fatty-bitmap-font](https://github.com/domo141/fatty-bitmap-font)，没想到居然是个宝库，作者在里面打包了很多bdf点阵字体工具脚本，最关键的是竟然有mkbold、mkitalic这两个转换制作点阵粗体和斜体的perl脚本。代码具体不懂，打开看了下没有调用fontforge和freetype完全就是一段小脚本才150行，不懂为什么fontforge竟然不支持点阵的粗体放大只支持矢量字体的加粗。
+接下来用"bitmap bold font"之类的关键字搜索无意中打开一个支持粗体的自制点阵西文字体[**fatty-bitmap-font**](https://github.com/domo141/fatty-bitmap-font)，没想到居然是个宝库，作者在里面打包了很多bdf点阵字体工具脚本，最关键的是竟然有**mkbold**、**mkitalic**这两个转换制作点阵粗体和斜体的perl脚本。代码具体不懂，打开看了下没有调用fontforge和freetype完全就是一段小脚本才150行，不懂为什么fontforge竟然不支持点阵的粗体放大只支持矢量字体的加粗。
 
 接下来就简单了，clone下来加上x权限在终端里对zpix执行下就会生成对应粗体，连字体命名都处理好了。脚本内容直接输出到终端的加个>就可以导出生成的字体文件。`./Git/fatty-bitmap-font/src/mkbold-1.0 /usr/share/fonts/misc/ZpixP.bdf >zpixpb.bdf`
 
 生成粗体后还可以继续用mkitalic生成对应的常规斜体和常规粗斜体，效果比freetype生成的假粗体好多了。freetype是无脑加粗，粗体看上去就是常规体的肥胖版，因为12px点阵本来就小直接加粗很多都糊成一团了。而perl脚本生成的粗体则是有粗有细，有的笔画加粗明显有的笔画轻微加粗，中文加粗的效果特别好，有种类似古人毛笔小楷的感觉。
 
-纯中文点阵的4个字型对比
+**纯中文点阵的4个字型对比**
 <img src="/assets/img/zpixfamily.png" width="775px" />
 
-alacritty真粗体和wezterm假粗体的对比
+**alacritty真粗体和wezterm假粗体的对比**
 <img src="/assets/img/zpixbold4term.png" width="750px" />
 
