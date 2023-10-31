@@ -23,9 +23,9 @@ wezterm官网上设置选项繁多，没那个需求就设置了字体和colorsc
 
 生成粗体后还可以继续用mkitalic生成对应的常规斜体和常规粗斜体，效果比freetype生成的假粗体好多了。freetype是无脑加粗，粗体看上去就是常规体的肥胖版，因为12px点阵本来就小直接加粗很多都糊成一团了。而perl脚本生成的粗体则是有粗有细，有的笔画加粗明显有的笔画轻微加粗，中文加粗的效果特别好，有种类似古人毛笔小楷的感觉。
 
-## 纯中文点阵的4个字型对比
+### 纯中文点阵的4个字型对比
 <img src="/assets/img/zpixfamily.png" width="775px" />
 
-## alacritty真粗体和wezterm假粗体的对比
+### alacritty真粗体和wezterm假粗体的对比
 <img src="/assets/img/zpixbold4term.png" width="750px" />
 
