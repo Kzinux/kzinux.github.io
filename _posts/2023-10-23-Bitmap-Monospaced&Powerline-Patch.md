@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: Zpix bdf点阵的修改和powerline破解
+title: bdf点阵的等宽化修改和powerline破解
 time: 2023年10月23日 星期一
 location: 中国
 pulished: true
