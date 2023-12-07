@@ -18,8 +18,9 @@ dns印象中应该归systemd-resolved管，打开对应的archwiki页面看了�
 ### systemd-networkd
 要改wlan0的dns也简单，systemd-networkd的archwiki也有介绍，不过这个似乎跟v2raya的透明代理冲突，设置固定ip和dns后一段时间就打不开网站了虽然wifi还连着。而且即使刚开始网络正常时resolvectl status下wlan0已经变成阿里dns，nslookup还是原来的dns和结果。
 ### /etc/resolv.conf
-又看了下wiki，这个文件才是浏览器读取的dns，里面一直显示192.168.1.1，即使强行更改也会变回去。文件注释里说是wlan0.dhcp生成的，但是systemd-networkd设置固定ip关闭dhcp还是会生成。难道是iwd这个wifi管理软件搞鬼，看了下iwd的wiki页面说默认是用的systemd-resolved的dns设置。又搜索了下原来是dhcpcd搞鬼，dhcpcd有自己的一套dns设置，会覆盖/etc/resolv.conf。archwiki页面有介绍禁用dhcpcd覆盖resolv.conf和设置自定义dns的方法。更简单的就是新建个/etc/resolv.conf.head，里面写上nameserver 223.5.5.5就会优先排在/etc/resolv.conf的顶部不会被覆盖。设置后重启systemd-networkd再nslookup结果就没被污染了dns也变成阿里的了。
+又看了下wiki，这个文件才是浏览器读取的dns，里面一直显示192.168.1.1，即使强行更改也会变回去。文件注释里说是wlan0.dhcp生成的，但是systemd-networkd设置固定ip关闭dhcp还是会生成。难道是iwd这个wifi管理软件搞鬼，看了下iwd的wiki页面说默认是用的systemd-resolved的dns设置。又搜索了下原来是dhcpcd搞鬼，dhcpcd有自己的一套dns设置，会覆盖/etc/resolv.conf。archwiki页面有介绍禁用dhcpcd覆盖resolv.conf和设置自定义dns的方法。~~更简单的就是新建个/etc/resolv.conf.head，里面写上nameserver 223.5.5.5就会优先排在/etc/resolv.conf的顶部不会被覆盖。设置后重启systemd-networkd再nslookup结果就没被污染了dns也变成阿里的了。~~
+resolv.conf.head的方法不管用，因为虽然添加了阿里dns但是dhcpcd添加的192.168.1.1也在resolv.conf里，而使用dns并不是由先后位置决定的。resolvectl status和nslookup里可以看到当前dns是随机在几个候选里变化的，轮到192.168.1.1时就完蛋。还是要设置dhcpcd的固定dns，方法archwiki也有加个设置项static domain_name_servers=223.5.5.5到/etc/dhcpcd.conf里。重启dhcpcd和systemd-resolved,systemd-networkd服务后resolv.conf里就只有阿里dns了。
 
-折腾了这么多前面全是白费，关键就是resolv.conf，兵家必争之地，很多网络管理程序都会直接覆盖resolv.conf。设置resolv.conf.head就是高优先级不会被覆盖而且systemd-resolved也是遵循resolv.conf的dns设置。之前以为resolv.conf会服从于systemd-resolved谁知道是反过来的，本末倒置瞎折腾了一番。
+折腾了这么多前面全是白费，关键就是resolv.conf，兵家必争之地，很多网络管理程序都会直接覆盖resolv.conf。~~设置resolv.conf.head就是高优先级不会被覆盖~~而且systemd-resolved也是遵循resolv.conf的dns设置。之前以为resolv.conf会服从于systemd-resolved谁知道是反过来的，本末倒置瞎折腾了一番。
 
 
