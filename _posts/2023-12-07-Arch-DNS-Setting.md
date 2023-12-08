@@ -40,7 +40,7 @@ DNSOverTLS=yes
 ```
 接下来要让systemd-resolved接管/etc/resolv.conf，按wiki里说的运行以下命令。`ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
 将systemd-resolved的配置软链接到resolv.conf接管设置。
-
+### 测试Dot连接
 这样就设置完成，要验证wiki里也有提到方法，因为普通dns走53端口，dot的dns走853端口，所以监控853和53端口，在ping域名解析的时候是否有数据包，如果853端口没有53端口有那就是普通dns，如果853端口有流量而53端口没有那就是启用了dot。通过ngrep或者tcpdump命令都可以。
 ```
 ngrep port 853
