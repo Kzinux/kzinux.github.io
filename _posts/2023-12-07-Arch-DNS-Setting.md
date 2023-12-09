@@ -31,13 +31,6 @@ resolv.conf解决了还要将wlan的dns也改过来，上面systemd-networkd有�
 ### dncpcd
 要接管dns设置先排除掉dncpcd对resolv.conf的覆盖写入，编辑/etc/dhcpcd.conf最后面加入下面内容。重启dhcpcd服务就生效了，这样dhcpcd就不会再对resolv.conf写入了。
 `nohook resolv.conf`
-### systemd-resolved启用dot
-新建/etc/systemd/resolved.conf.d/文件夹，然后在新文件夹下新建个文件dns_over_tls.conf，内容如下，重启systemd-resolved服务使之生效。
-```
-[Resolve]
-DNS=223.5.5.5
-DNSOverTLS=yes
-```
 ### /etc/resolv.conf
 接下来要让systemd-resolved接管/etc/resolv.conf，按wiki里说的运行以下命令。`ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
 将systemd-resolved的配置软链接到resolv.conf接管设置。
@@ -55,6 +48,13 @@ UseDNS=false
 ```
 重启systemd-networkd和systemd-resolved就可以看到systemd-resolved接管了dns设置，systemd-networkd下不再有dns设置了。
 <img src="/assets/img/dns.png" width="572px" />
+### systemd-resolved启用dot
+新建/etc/systemd/resolved.conf.d/文件夹，然后在新文件夹下新建个文件dns_over_tls.conf，内容如下，重启systemd-resolved服务使之生效。
+```
+[Resolve]
+DNS=223.5.5.5
+DNSOverTLS=yes
+```
 ### 测试Dot连接
 这样就设置完成，要验证wiki里也有提到方法，因为普通dns走53端口，dot的dns走853端口，所以监控853和53端口，在ping域名解析的时候是否有数据包，如果853端口没有53端口有那就是普通dns，如果853端口有流量而53端口没有那就是启用了dot。通过ngrep或者tcpdump命令都可以。
 ```
