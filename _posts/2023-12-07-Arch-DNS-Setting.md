@@ -46,3 +46,5 @@ DNSOverTLS=yes
 ngrep port 853
 tcpdump -ni wlan0 -p port 853
 ```
+后来发现resolvectl自带命令可以查看dns请求是否是dot的，运行下图命令可以看到请求来源是network而且是加密的。
+<img src="/assets/img/dnsdot.png" width="534px" />
