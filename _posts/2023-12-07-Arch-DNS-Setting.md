@@ -28,9 +28,13 @@ resolv.conf解决了还要将wlan的dns也改过来，上面systemd-networkd有�
 
 ## Systemd-resolved管理dns以及Dns over tls设置
 上面通过dhcpcd设置dns的方法还是不够妥当，还是让systemd-resolved接管dns相关的设置。顺便介绍下dot设置以及验证是否启用。
+
 ### dncpcd
-要接管dns设置先排除掉dncpcd对resolv.conf的覆盖写入，编辑/etc/dhcpcd.conf最后面加入下面内容。重启dhcpcd服务就生效了，这样dhcpcd就不会再对resolv.conf写入了。
-`nohook resolv.conf`
+~~要接管dns设置先排除掉dncpcd对resolv.conf的覆盖写入，编辑/etc/dhcpcd.conf最后面加入下面内容。重启dhcpcd服务就生效了，这样dhcpcd就不会再对resolv.conf写入了。
+`nohook resolv.conf`~~
+
+原来systemd-networkd自带dhcp功能不需要dhcpcd包，上回切换到systemd网络管理没处理干净一直用到现在，删掉dhcpcd就行了。
+
 ### /etc/resolv.conf
 接下来要让systemd-resolved接管/etc/resolv.conf，按wiki里说的运行以下命令。`ln -sf ../run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
 将systemd-resolved的配置软链接到resolv.conf接管设置。
