@@ -9,7 +9,7 @@ excerpt_separator: "<!--more-->"
 Zpix只有12px常规点阵，alacritty虽然有设置粗斜体的选项但是没有效果，不像firefox可以自动调用freetype生成的假粗体。最近看到有人推荐wezterm，和alacritty一样都是用rust写的也支持gpu渲染，alacritty默认的图标丑丑的就想试试这个。
 <!--more-->
 
-wezterm官网上设置选项繁多，没那个需求就设置了字体和colorscheme这些就可以了。打开发现竟然有粗体，应该和firefox一样调用的假粗体。有了粗体以后终端显示的层次重点分明，比单纯的常规体看起来漂亮可读性也高多了。不过使用了一天发现也有些缺点，比较臃肿功能繁多，多标签、窗口多面板分割还有脚本什么的，不像alacritty就是单纯的终端。其实不喜欢大而全的软件，小而精更好，多标签面板之类的用tmux实现效率更高更好。开一个窗口用久了内存占用大概120多M，对比alacritty大概40M，而且打开时窗口加载明显比alacritty卡顿一下。
+wezterm官网上设置选项繁多，没那个需求就设置了字体和colorscheme这些就可以了。打开发现竟然有粗体，应该和firefox一样调用的假粗体。有了粗体以后终端显示的层次重点分明，比单纯的常规体看起来漂亮可读性也高多了。不过使用了一天发现也有些缺点，比较臃肿功能繁多，多标签、窗口多面板分割还有脚本什么的，不像alacritty就是单纯的终端。其实不喜欢大而全的软件，小而精更好，多标签面板之类的用tmux实现效率更高更好。开一个窗口用久了内存占用大概120多M，对比alacritty大概40M，而且打开时窗口加载明显比alacritty卡顿一下。另外发现wezterm识别不到bdf的粗体,wezterm ls-fonts --list-system识别出来的粗体被标记为常规体（regular）。所以即使有真粗体，wezterm也全当作常规体转而使用freetype生成的假粗体，明明fc-list里显示的是粗体的。
 
 想换回alacritty，但是看过wezterm更漂亮的多字重显示心痒难耐，alacritty又不支持freetype的假粗体，那最后的办法就是用上真粗体。zpix是没粗体的，只能想办法找一个搭配的粗体。
 
