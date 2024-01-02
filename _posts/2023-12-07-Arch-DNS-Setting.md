@@ -49,6 +49,12 @@ DHCP=yes
 
 [DHCPv4]
 UseDNS=false
+
+[DHCPv6]
+UseDNS=false
+
+[IPv6AcceptRA]
+UseDNS=false
 ```
 重启systemd-networkd和systemd-resolved就可以看到systemd-resolved接管了dns设置，systemd-networkd下不再有dns设置了。
 <img src="/assets/img/dns.png" width="572px" />
