@@ -29,7 +29,8 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
 
 ```
 -----------------------2024/1/5----------------------------
-用了一阵感觉标签多了时要跳到最后看标签总数麻烦，刚好看到有人「[Show the number of open tabs on the 'List all tabs' button](https://np.reddit.com/r/FirefoxCSS/comments/s4wsww/show_the_number_of_open_tabs_on_the_list_all_tabs/)」分享在所有标签页菜单按钮显示标签总数的css，改了改样式拿来用。另外把标签序号改成只有当前标签页显示，全部显示乱糟糟的。
+
+用了一阵感觉标签多了时要跳到最后看标签总数麻烦，刚好看到[有人](https://np.reddit.com/r/FirefoxCSS/comments/s4wsww/show_the_number_of_open_tabs_on_the_list_all_tabs/)分享在所有标签页菜单按钮显示标签总数的css，改了改样式拿来用。另外把标签序号改成只有当前标签页显示，全部显示乱糟糟的。
 <img src="/assets/img/tabcount.png" width="563px" />
 ```
 /* 所有标签菜单按钮显示标签总数 */  
