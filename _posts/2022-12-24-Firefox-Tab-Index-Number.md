@@ -49,7 +49,6 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
 #alltabs-button > .toolbarbutton-badge-stack::before {  
     content: "/"counter(tabCount);  
     font-weight:bold !important;
-    color: #f2eee8;  
     opacity: var(--toolbarbutton-icon-fill-opacity);  
     position: absolute;  
     bottom: 0%;  
@@ -62,7 +61,6 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
 }
 .tab-text:before{
     font-size:0.85em  !important;
-    color:black !important;
     position: relative;
     top: -6px;
     content: counter(nth-tab)"/";
