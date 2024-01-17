@@ -35,12 +35,14 @@ clipmenu端配置好了就可以启动后台进程clipmenud，启动后会实时
 
 接下来是前端rofi这边的配置。
 
-- [ ] **首先是快捷键呼出**
+ 
+#### **首先是快捷键呼出** ####
 
 在对应桌面的快捷键设置里给clipmenu设置一个快捷键，默认prompt显示dmenu，可以加-p定制prompt。
 `clipmenu -p clipmenu`
 
-- [ ] **条目增加序号**
+ 
+#### **条目增加序号** ####
 
 rofi支持菜单序号但是默认没启用，在rofi主题里增加下面内容启用序号。
 
@@ -58,12 +60,16 @@ element-index {
 }
 ```
 
-- [ ] **快捷键选择条目**
+ 
+#### **快捷键选择条目** ####
 
 rofi默认支持，win键+序号就可以选择对应条目，更习惯用alt 1在rofi配置文件里改下就可以了。
 
 
 <img src="/assets/img/clipmenu.png" width="768px" />
 
+---------换个主题----------
+
+<img src="/assets/img/rofi-clipmenu-listary.png" width="633px" />
 
 

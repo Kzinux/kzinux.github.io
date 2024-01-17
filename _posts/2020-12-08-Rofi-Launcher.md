@@ -25,3 +25,9 @@ rofi内置了很多主题，可以用rofi-theme-selector选择，作者也收集
 原始配色用久腻了，换了黑红色调的新搭配。
 
 <img src="/assets/img/rofi-newtheme.png" width="768px" />
+
+------------------------2024/01/17---------------------------
+
+暗色系看腻了参考listary改了个亮色系的主题。
+
+<img src="/assets/img/rofi-listary.png" width="633px" />
