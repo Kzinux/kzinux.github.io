@@ -37,7 +37,9 @@ bdf用了段时间，后来看到有人说harfbuzz停止支持bdf再加上wezter
 
 ##### **bitsnpicas**  #####
 忽然想起来zpix作者提到过找到了新工具转换bdf为ttf，到github页面一看tools/bin下有个jar的文件就是了。按照名字找到此工具的[github主页](https://github.com/kreativekorp/bitsnpicas/tree/master "kreativekorp/bitsnpicas: Bits'N'Picas - Bitmap & Emoji Font Creation & Conversion Tools")，到release页面把最新的BitsNPicas.jar下载下来。因为是java的程序还要安装java环境直接安装jdk，然后按照作者给出的命令转换就行了。`java -jar BitsNPicas.jar convertbitmap -f ttf -o Zpix.ttf Zpix.bdf`
-如果需要改名最好现在bdf格式上修改好，然后再用BitsNPicas.jar转换，因为ttf格式的点阵fontforge编辑修改会破坏掉点阵。这样子以后就不当心以后bdf格式失去支持了，xterm用ttf格式的字符宽度有问题不知道怎么解决，反正不是主用的就让它用bdf字体。
+如果需要改名最好先在bdf格式上修改好，然后再用BitsNPicas.jar转换，因为ttf格式的点阵fontforge编辑修改会破坏掉点阵。
+
+这样子以后就不当心以后bdf格式失去支持了，xterm用ttf格式的字符宽度有问题不知道怎么解决，反正不是主用的就让它用bdf字体。
 
 ### 纯中文点阵的4个字型对比
 <img src="/assets/img/zpixfamily.png" width="775px" />
