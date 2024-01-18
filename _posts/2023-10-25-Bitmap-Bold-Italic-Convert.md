@@ -25,6 +25,18 @@ wezterm官网上设置选项繁多，没那个需求就设置了字体和colorsc
 
 自动生成的粗体有的字形不理想，比如1和8，可以在fontforge里双击字符打开编辑窗口绘制修改字形。和拼积木差不多，调整完成后generate font就可以了。
 
+#### bdf点阵转换为ttf/otb  ####
+bdf用了段时间，后来看到有人说harfbuzz停止支持bdf再加上wezterm也识别不到bdf的粗体，就想要换一个更现代支持更广泛的字体格式。
+
+##### fontforge  #####
+直接用fontforge是可以转换成otb的，ttf就不行了。file-gengrate生成字体对话框里选择otbs生成就可以，生成的otb小了很多猜测跟压缩差不多，bdf应该是元数据未压缩，在alacritty里正常使用，xterm下字体全挤成一堆了。搜索了下fontforge的[issue](https://github.com/fontforge/fontforge/issues/3853 "Generating an OTB from GohuFont BDF seems to lose its width · Issue #3853 · fontforge/fontforge")有提到转换bdf为otb会丢失宽度而且没解决。
+
+看到最后面有回复写了个[转换脚本](https://github.com/ctrlcctrlv/bitmapfont2otb "ctrlcctrlv/bitmapfont2otb: Convert a bitmap font in BDF, PCF, or SFD format to an OpenType Bitmap font using FontForge's API and bdfreader")解决了此问题，clone下来安装了俩依赖试了下卡半天内存不停涨还以为坏了，等了几分钟终于好了。生成的otb有十几M大了好几倍，这下alacritty和xterm都正常不过在firefox里中文都挤成了一团，应该是作者没考虑到cjk字符，都当作英文处理cjk字符宽度错了。
+
+##### bitsnpicas  #####
+忽然想起来zpix作者提到过找到了新工具转换bdf为ttf，到github页面一看tools/bin下有个jar的文件就是了。按照名字找到此工具的[github主页](https://github.com/kreativekorp/bitsnpicas/tree/master "kreativekorp/bitsnpicas: Bits'N'Picas - Bitmap & Emoji Font Creation & Conversion Tools")，到release页面把最新的BitsNPicas.jar下载下来。因为是java的程序还要安装java环境直接安装jdk，然后按照作者给出的命令转换就行了。`java -jar BitsNPicas.jar convertbitmap -f ttf -o Zpix.ttf Zpix.bdf`
+如果需要改名最好现在bdf格式上修改好，然后再用BitsNPicas.jar转换，因为ttf格式的点阵fontforge编辑修改会破坏掉点阵。这样子以后就不当心以后bdf格式失去支持了，xterm用ttf格式的字符宽度有问题不知道怎么解决，反正不是主用的就让它用bdf字体。
+
 ### 纯中文点阵的4个字型对比
 <img src="/assets/img/zpixfamily.png" width="775px" />
 
