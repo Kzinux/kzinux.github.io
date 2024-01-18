@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: 转换点阵字体制作独立粗体和斜体
+title: bdf点阵制作独立粗体和斜体以及转换格式「ttf」
 time: 2023年10月25日 星期三
 location: 中国
 pulished: true
