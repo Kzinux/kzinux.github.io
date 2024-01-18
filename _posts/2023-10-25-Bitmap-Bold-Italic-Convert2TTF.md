@@ -41,7 +41,7 @@ bdf用了段时间，后来看到有人说harfbuzz停止支持bdf再加上wezter
 
 alacritty用ttf完美切换，另外firefox下也正常使用，xterm用ttf格式的字体中英文要分开设置，bdf可以都设置成zpix。
 
-这样子以后就不当心以后bdf格式失去支持了，
+这样子以后就不当心bdf格式失去支持了，
 
 ### 纯中文点阵的4个字型对比
 <img src="/assets/img/zpixfamily.png" width="775px" />
