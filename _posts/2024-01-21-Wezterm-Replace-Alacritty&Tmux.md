@@ -14,11 +14,11 @@ Tmux很早就开始用了，最早用的是screen，后来tmux流行开了就换
 
 Tmux小巧功能丰富，标签管理跳转也算方便，弥补alacritty功能上的缺失，但是有些小痛点让人耿耿于怀。
 
-#### **tmux自身功能缺陷**  ####
+#### **1.tmux自身功能缺陷**  ####
 
 tmux的窗口标题刷新问题，tmux可以自定义窗口标题，pane_current_path可以显示当前标签路径。不过显示刷新有延迟，不像直接在alacritty这样的终端上时实时显示。这个困扰了挺久的后来在issue里有人提到说是跟status-interval状态栏刷新挂钩的，默认是5s所以有延迟，可以设置为1s，看上去和正常终端一样但是实现方式太丑陋了。
 
-#### **隔离浮置于alacritty**  ####
+#### **2.隔离浮置于alacritty**  ####
 
 Tmux是套了一层壳运行在alacritty之上，所以在用户和alacritty之间多了一层tmux，有些alacritty的功能就无法实现。比如alacritty的copy mode只能复制当前页内容不能朝前翻页滚动。虽然tmux也提供copy mode但是有缺陷复制长行会断行丢失格式。
 
@@ -30,7 +30,7 @@ wezterm试用后虽然打开速度资源占用不如alacritty，但是最大的�
 
 ### **Wezterm**  ###
 
-#### **wezterm.lua**  ####
+#### **1.wezterm.lua**  ####
 
 wezterm用lua设置文件，比alacritty和xterm之类的都复杂，原理上也不是linux常见的一行一个配置项的思路，更类似于编程语言。对于不懂代码的有点复杂，好在作者有个[官网](https://wezfurlong.org/wezterm/config/files.html)专门介绍配置，搜索也方便。
 配置文件.wezterm.lua放在~/下，基本结构参照作者给的模板，每行都有注释，自定义配置放在config choices后面一行。
@@ -56,9 +56,9 @@ config.color_scheme = 'AdventureTime'
 -- and finally, return the configuration to wezterm
 return config
 ```
-#### **字体**  ####
+#### **2.字体**  ####
 
-##### **字体链接和大小**  #####
+##### **1).字体链接和大小**  #####
 
 终端到手先把字体改掉，wezterm支持字体链接，可以设置多个候选字体排列顺序。
 
@@ -75,7 +75,7 @@ config.font = wezterm.font_with_fallback({
 --设置字体大小
 config.font_size = 9.0
 ```
-#####  **禁用斜体**  #####
+#####  **2).禁用斜体**  #####
 
 vim里注释之类的用调用斜体，但是点阵斜体可读性不好，干脆禁用掉，用font_rules实现。
 --字体规则禁用斜体
@@ -106,9 +106,9 @@ config.font_rules = {
   },
 }
 ```
-#### **主题外观**  ####
+#### **3.主题外观**  ####
 
-#####  **颜色方案**  #####
+#####  **1).颜色方案**  #####
 
 终端配色不仅影响美观，长时间使用选择一个舒缓眼睛压力的方案很重要。wezterm内置了很多主题，可以到网站「[The Color Schemes Section](https://wezfurlong.org/wezterm/colorschemes/index.html)」自己挑。如果想要自定义微调就不能设置colorscheme否则自定义颜色设置就会失效。颜色倾向于暗色系的太亮眼的看久了眼睛累。
 
@@ -172,7 +172,7 @@ config.colors = {
   },
 }
 ```
-#####  **粗体配色**  #####
+#####  **2).粗体配色**  #####
 
 终端的粗体一般默认用brights配色，可以设置让粗体用普通配色。
 
@@ -180,14 +180,14 @@ config.colors = {
 --粗体用普通色系
 config.bold_brightens_ansi_colors = "No"
 ```
-#####  **窗口大小**  #####
+#####  **3).窗口大小**  #####
 
 ``` lua
 --设置默认窗口行列数
 config.initial_rows = 36
 config.initial_cols = 155
 ```
-#####  **窗口边框空白**  #####
+#####  **4).窗口边框空白**  #####
 
 ``` lua
 --设置内容和边框之间的空白
@@ -199,7 +199,7 @@ config.window_padding = {
 }
 ```
 
-####  **标签栏**  ####
+####  **4.标签栏**  ####
 
 标签栏默认是常见的上置和丑丑的样子，可以设置禁用fancy_tab_bar就会变成简洁的外观，自己再改改就和tmux的标签栏差不多了。
 
@@ -254,7 +254,7 @@ tab_bar = {
     },
 },
 ```
-#### **快捷键**  ####
+#### **5.快捷键**  ####
 
 wezterm的快捷键也很丰富，键位设置很多都是共通的，copy mode之类也都是vim键位。一般不改默认键位，但是希望标签页管理的键位改成firefox的alt 1~9这样的。
 
@@ -283,7 +283,7 @@ config.keys = {
   }
 ```
 
-#### **预加载标签**  ####
+#### **6.预加载标签**  ####
 
 类似tmux的session可以设置标签页数目和布局以及运行的命令，和快捷键一样需要在最前面添加一行local mux = wezterm.mux依赖。cwd是标签自定义路径，args就是标签自动运行的程序。
 
