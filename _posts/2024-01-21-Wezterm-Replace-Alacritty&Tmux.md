@@ -305,4 +305,5 @@ end)
 ```
 
 这样就完成了对alacritty和tmux的完美平替，而且不用套壳直接沟通terminal，启动慢一点以及内存多用几十M和体验比起来不值一提。
-<img src="/assets/img/wezterm.png" width="600" />
+
+<img src="/assets/img/wezterm.png" width="600px" />
