@@ -259,7 +259,7 @@ tab_bar = {
 wezterm的快捷键也很丰富，键位设置很多都是共通的，copy mode之类也都是vim键位。一般不改默认键位，但是希望标签页管理的键位改成firefox的alt 1~9这样的。
 
 设置快捷键运行下面命令就可以直接生成目前的配置。`wezterm show-keys --lua> key.lua`
-注意需要在配置文件最前面添加一行local act = wezterm.action
+注意需要在配置文件前面local wezterm后面添加一行local act = wezterm.action
 才能自定义快捷键。
 
 ``` lua
@@ -285,7 +285,7 @@ config.keys = {
 
 #### **6.预加载标签**  ####
 
-类似tmux的session可以设置标签页数目和布局以及运行的命令，和快捷键一样需要在最前面添加一行local mux = wezterm.mux依赖。cwd是标签自定义路径，args就是标签自动运行的程序。
+类似tmux的session可以设置标签页数目和布局以及运行的命令，和快捷键一样需要在前面local wezterm后添加一行local mux = wezterm.mux依赖。cwd是标签自定义路径，args就是标签自动运行的程序。
 
 ``` lua
 --启动预加载标签
