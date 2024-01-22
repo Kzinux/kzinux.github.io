@@ -61,7 +61,7 @@ ttf的点阵和bdf比起来颜色和轮廓有点虚，zpix发布的ttf版也是�
   </match>
 ```
 
-alacritty用ttf完美切换，另外firefox下也正常使用，xterm用ttf格式的字体中英文要分开设置，bdf可以都设置成zpix。
+alacritty用ttf完美切换，另外firefox下也正常使用。~~xterm用ttf格式的字体中英文要分开设置~~，bdf可以都设置成zpix。用上面fontconfig方法禁用反锯齿后xterm也可以中英文都设置成Zpix正常显示。
 
 这样子以后就不当心bdf格式失去支持了，
 
