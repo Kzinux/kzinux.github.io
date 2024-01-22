@@ -43,6 +43,7 @@ bdf用了段时间，后来看到有人说harfbuzz停止支持bdf再加上wezter
 ttf的点阵和bdf比起来颜色和轮廓有点虚，zpix发布的ttf版也是这样，应该是反锯齿「antialias」的效果。Firefox下ttf版禁用和默认antialiias的效果对比。 
 
 <img src="/assets/img/Zpix-antialias.png" width="671px" />
+
 解决方法就是用fontconfig禁用zpix的antialias，还可以指定禁用12px及以下的字号。下图就是禁用12px及以下的zpix反锯齿，可以看到点阵没有反锯齿，标题大字号下有反锯齿，代码在下面。
 
 <img src="/assets/img/Zpix-disableAntialias.png" width="631px" />
