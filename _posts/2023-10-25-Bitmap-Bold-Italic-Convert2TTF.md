@@ -40,12 +40,12 @@ bdf用了段时间，后来看到有人说harfbuzz停止支持bdf再加上wezter
 如果需要改名最好先在bdf格式上修改好，然后再用BitsNPicas.jar转换，因为ttf格式的点阵fontforge编辑修改会破坏掉点阵。
 
 ##### **ttf点阵禁用antialias**  #####
-ttf的点阵和bdf比起来颜色和轮廓有点虚，zpix发布的ttf版也是这样，应该是反锯齿「antialias」的效果。Firefox下ttf版默认和禁用antialiias的效果对比。 
+ttf的点阵和bdf比起来颜色和轮廓有点虚，zpix发布的ttf版也是这样，应该是反锯齿「antialias」的效果。Firefox下ttf版禁用和默认antialiias的效果对比。 
 
-<img src="/assets/img/Zpix-antialias.png" width="717px" />
-解决方法就是用fontconfig禁用zpix的antialias，还可以指定禁用12px及以下的字号。下图就是禁用12px及以下的zpix反锯齿，可以看到url点阵没有反锯齿，其他大字号下有反锯齿，代码在下面。
+<img src="/assets/img/Zpix-antialias.png" width="671px" />
+解决方法就是用fontconfig禁用zpix的antialias，还可以指定禁用12px及以下的字号。下图就是禁用12px及以下的zpix反锯齿，可以看到点阵没有反锯齿，标题大字号下有反锯齿，代码在下面。
 
-<img src="/assets/img/Zpix-disableAntialias.png" width="611px" />
+<img src="/assets/img/Zpix-disableAntialias.png" width="631px" />
 ``` xml
   <match target="font">
     <test qual="any" name="family" compare="eq">
