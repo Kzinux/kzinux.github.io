@@ -26,7 +26,7 @@ Tmux是套了一层壳运行在alacritty之上，所以在用户和alacritty之�
 
 其实一直想找个不用套壳的terminal，kitty号称对位alacritty且功能完全，但是居然不支持点阵字体。issue里翻了下和alacritty的标签功能一样挺多人提的，但是作者坚持认为bitmap过时落后不符合kitty的先进理念。这个比alacritty的不支持标签离谱多了。
 
-wezterm试用后虽然打开速度资源占用不如alacritty，但是最大的问题是无法正确识别bdf和pcf的粗体。前面的那篇[博文](https://kzinux.github.io/2023/10/25/Bitmap-Bold-Italic-Convert2TTF.html "bdf点阵制作独立粗体和斜体以及转换格式「ttf」")里提到解决了点阵转换ttf格式后问题也算解决了。而且之后发现wezterm的git版已经解决了这个bug「[fonts: improve categorization, selection of pcf fonts · wez/wezterm@70931f5](https://github.com/wez/wezterm/commit/70931f58f1c7a57fd377f9862597e7b1fe070b52)」，只要等下个release就行了。
+wezterm试用后虽然打开速度资源占用不如alacritty，但是最大的问题是无法正确识别bdf和pcf的粗体。前面的那篇[博文](https://kzinux.github.io/2023/10/25/Bitmap-Bold-Italic-Convert2TTF.html "bdf点阵制作独立粗体和斜体以及转换格式「ttf」")里提到解决了点阵转换ttf格式后问题也算解决了。而且之后发现wezterm的git版已经解决了这个bug「[fonts: improve categorization, selection of pcf fonts · wez/wezterm@70931f5](https://github.com/wez/wezterm/commit/70931f58f1c7a57fd377f9862597e7b1fe070b52)」，只要等下个release就行了。(终于发新版了，20240128.202157.1e552d76-1测试bdf粗体已经正常识别了)
 
 ### **Wezterm**  ###
 
