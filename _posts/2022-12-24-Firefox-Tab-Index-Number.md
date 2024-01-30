@@ -87,8 +87,9 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
     position: absolute;
     top: 0px;
     left: 2px;
-    content: counter(nth-tab)"/";
+    content: counter(nth-tab);
     counter-increment: nth-tab;
+    z-index: 999 !important;
 }
 .tab-content:not([selected]):before{
     display:table-row !important;
