@@ -71,3 +71,27 @@ Linux下Firefox的alt·1～9切换标签页很喜欢，特别是标签页多的�
     visibility:collapse !important;    
 }
 ```
+-----------------------2024/1/30----------------------------
+
+当前标签序号放在tab-text前用relative实现切换标签时标题会跳动，改了下放到tab-content前有一定空间可以用absolute，icon前不行有的页面没有icon。
+
+<img src="/assets/img/tabindex2.png" width="596px" />
+
+```
+/*当前标签序号*/
+.tabbrowser-tab:first-child{
+  counter-reset: nth-tab 0;
+}
+.tab-content:before{
+    font-size:0.85em  !important;
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    content: counter(nth-tab)"/";
+    counter-increment: nth-tab;
+}
+.tab-content:not([selected]):before{
+    display:table-row !important;
+    visibility:collapse !important;    
+}
+```
