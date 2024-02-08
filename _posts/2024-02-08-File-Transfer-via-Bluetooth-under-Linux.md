@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: Wezterm平替Alacritty和Tmux
+title: Linux下和手机通过蓝牙互传文件
 time: 2024年02月08日 星期四
 location: 中国
 pulished: true
