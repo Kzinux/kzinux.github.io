@@ -25,7 +25,8 @@ excerpt_separator: "<!--more-->"
 
 ### **后台优化**  ###
 发现blueman原来是python程序，还带了applet，tray之类的用不上的几个拖油瓶。如果只是随用随关倒无所谓，但是彻底关闭blueman后传文件就失败了，连接是没问题的。
-研究了下传文件是obexd服务管的，为什么一定要开blueman才能传。应该是文件接收默认需要确认，而确认是由blueman管的，那只要让obxed不要询问默认静默接收就没问题了。方法就是添加-a参数给obxed，另外还有-r自定义接收文件保存路径。在/etc/systemd/user下新建obex.service.d文件夹，再新建个fileReceive.conf的文件，内容如下，覆盖oneshot之外的service默认execstart需要先清空否则会报错：
+
+研究了下传文件是obexd服务管的，为什么一定要开blueman才能传。应该是文件接收默认需要确认，而确认是由blueman管的，那只要让obxed不要询问默认静默接收就没问题了。方法就是添加-a参数给obxed，另外还有-r自定义接收文件保存路径。在/etc/systemd/user下新建obex.service.d文件夹，再新建个fileReceive.conf的文件，内容如下，覆盖service默认execstart需要先清空否则会报错：
 
 ```
 [Service]
