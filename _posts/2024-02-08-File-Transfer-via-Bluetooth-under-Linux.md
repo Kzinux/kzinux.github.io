@@ -41,3 +41,5 @@ ExecStart=/usr/lib/bluetooth/obexd -r /home/user/Downloads -a
 blueman虽然简单好用，但是每次启动带一堆拖油瓶和android流氓一样让人不爽。而且默认自启动，每次更新都得删那个desktop，还是得找个轻巧的替换。
 
 gui前端除了gnome和kde深度绑定的，其他要么功能不全，要么也是python还不如blueman。github上搜了下发现好多蓝牙管理的程序，看到bluez-tools支持发送文件还有连接之类的，extra源里的直接安装。自带的bt-obex命令试了下发送文件成功，还可以作为obex服务端替代bluez-obex。感觉这个全能啊可以替代blueman和bluez-obex，有这个其他的都不需要。
+
+看到bluez-tools页面下方有提到有些问题没解决，看来还是用来当给手机发送文件的工具，留着bluez-utils做连接管理工具，继续用bluez-obex做文件接收后台。
