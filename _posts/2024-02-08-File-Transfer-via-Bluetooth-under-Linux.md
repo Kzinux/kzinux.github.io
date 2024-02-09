@@ -36,3 +36,8 @@ ExecStart=/usr/lib/bluetooth/obexd -r /home/user/Downloads -a
 这样只需要enable一个obex服务就可以接收手机文件了，需要发送文件再打开臃肿的blueman。blueman关闭只是关闭前端，后台还有几个拖油瓶需要手动关闭，自启动也可以取消了，在/etc/xdg/autostart/下。
 
 <img src="/assets/img/bluetooth.png" width="435px" />
+
+### **命令行选择**  ###
+blueman虽然简单好用，但是每次启动带一堆拖油瓶和android流氓一样让人不爽。而且默认自启动，每次更新都得删那个desktop，还是得找个轻巧的替换。
+
+gui前端除了gnome和kde深度绑定的，其他要么功能不全，要么也是python还不如blueman。github上搜了下发现好多蓝牙管理的程序，看到bluez-tools支持发送文件还有连接之类的，extra源里的直接安装。自带的bt-obex命令试了下发送文件成功，还可以作为obex服务端替代bluez-obex。感觉这个全能啊可以替代blueman和bluez-obex，有这个其他的都不需要。
