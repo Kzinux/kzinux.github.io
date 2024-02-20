@@ -38,6 +38,7 @@ ExecStart=/usr/lib/bluetooth/obexd -r /home/user/Downloads -a
 <img src="/assets/img/bluetooth.png" width="435px" />
 
 -------------------------------------2024/02/21---------------------------------------
+
 难得重启一次居然发现obex没有自动启动，明明enable了服务。打开service文件是dbus什么的，猜测应该是按需启动由blueman之类的通过dbus唤起。搜索一番，enable了服务却不自启动原因五花八门，终于看到个说是因为没有wantedby所以不会被启动。在上面的自定义文件fileReceive里添加wantedby再加个after保险，重启系统obex自启动了。
 
 ```
