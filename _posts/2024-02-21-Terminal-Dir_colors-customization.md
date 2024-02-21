@@ -43,3 +43,7 @@ zstyle ':completion:*:default'         list-colors ${(s.:.)LS_COLORS}
 ```
 
 问题还复杂，grml里有补全颜色配置但不知为何不生效而且还会和稍有不同的同样配置起冲突，只有将grml里zstyle配置复制到.zshrc里，让/etc/zsh/zshrc和.zshrc里同时存在一样的zstyle配置才会生效。真是诡异又别扭的bug，够折腾人的。
+
+忽然灵光一闪想通了，上面eval dircolors设置ls_colors变量的命令是放在.zshrc里的，.zshrc优先级高于/etc/zsh/zshrc，所以grml里zstyle是在dircolors之前执行的。这样grml的zstyle就无法收到修改后的ls_colors，而我.zshrc里zstyle是在eval dircolors后面的，就可以接收到修改后的ls_colors。
+
+为了验证将eval dircolors放到里zstyle后面，果然颜色又变回默认了。那问题就是要确保zstyle设置补全颜色方案的代码要在eval dircolors设置ls_colors变量的命令之后执行，而且还要和grml里的zstyle代码一样否则会冲突导致都失效。
