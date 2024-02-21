@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 终端各类型文件自定义颜色
-time: 2024年02月08日 星期四
+time: 2024年02月21日 星期三
 location: 中国
 pulished: true
 excerpt_separator: "<!--more-->"
