@@ -27,4 +27,4 @@ clipcat提供后台clipcatd，命令行前端clipcatctl和gui前端clipcat-menu�
 extra_arguments = ["-theme-str", "listview {require-input: false;} element {children: [element-index,element-text]; }"]
 ```
 
-<img src="/assets/img/clipcat.png" width="563px" />
+<img src="/assets/img/clipcat.png" width="518px" />
