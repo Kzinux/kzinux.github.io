@@ -34,8 +34,8 @@ Import不管用只能试试传统的复制粘贴，刚开始分别打开Zpix和G
 
 通过这种方式合并补全的Zpix的bdf版系统正常识别，ttf版也和以前一样都正常了。
 
-### **点阵字体位置修改**  ###
-新生成的字体韩文和中文的水平基线不平，韩文的点阵位置偏高。打开Gulimche看了下Gulimche的点阵比Zpix高一格也偏右一格，fontforge菜单栏Element-Transformations-Transform-Move功能不知道点阵能不能用，刚开始试了下1，5，10之类的没反应，发狠试了下500居然真的移动了。多试了几次原来100代表点阵编辑窗口里的一格，那只要Move-X -100 Y -100就行了。
+### **点阵字符位置修改**  ###
+新生成的字体韩文和中文的水平基线不齐，韩文的点阵位置偏高。打开Gulimche看了下Gulimche的点阵比Zpix高一格也偏右一格，fontforge菜单栏Element-Transformations-Transform-Move功能不知道点阵能不能用，刚开始试了下1，5，10之类的没反应，发狠试了下500居然真的移动了。多试了几次原来100代表点阵编辑窗口里的一格，那只要Move-X -100 Y -100就行了。
 
 方法先跟之前一样选择韩文字符范围，然后点击菜单栏Element-Transformations-Transform-Move，X,Y都填-100代表向左和向下各移动一格。改好后Generate保存，然后用上面复制粘贴的方法把修改好的韩文字符粘贴到Zpix里，最后生成新Bdf就大功告成了。
 
