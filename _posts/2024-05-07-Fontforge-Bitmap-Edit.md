@@ -39,5 +39,5 @@ Import不管用只能试试传统的复制粘贴，刚开始分别打开Zpix和G
 
 方法先跟之前一样选择韩文字符范围，然后点击菜单栏Element-Transformations-Transform-Move，X,Y都填-100代表向左和向下各移动一格。改好后Generate保存，然后用上面复制粘贴的方法把修改好的韩文字符粘贴到Zpix里，最后生成新Bdf就大功告成了。
 
-<img src="/assets/img/Zpixunicode.png" width="503px" />
+<img src="/assets/img/Zpixunicode.png" width="564px" />
 
