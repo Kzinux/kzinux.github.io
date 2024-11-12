@@ -28,3 +28,7 @@ extra_arguments = ["-theme-str", "listview {require-input: false;} element {chil
 ```
 
 <img src="/assets/img/clipcat.png" width="432px" />
+
+
+---------------------------------------
+又换回clipmenu了，clipcat有个大毛病，用一段时间后就会失效，复制后剪贴板列表不会更新。[Github issues](https://github.com/xrelkd/clipcat/issues/434)里也有挺多人反馈的。再加上上clipmenu作者用c重写了程序，虽然用环境变量做设置不方便，设置好也不用改也问题不大。
