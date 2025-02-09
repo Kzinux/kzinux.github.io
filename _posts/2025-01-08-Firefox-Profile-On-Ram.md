@@ -40,3 +40,7 @@ Psd默认每隔一小时将内存盘中的文件更改同步回硬盘中，可�
 使用一周后firefox的读写总量，800M多一点的读取，刚打开就是790多M，一周后增加了十几M，写入20多M也是差不多从打开时的几M增加了十几M。和过去动辄几十上百G的读取写入相比完全可以忽略不计。
 
 <img src="/assets/img/firefoxIO1week.png" width="350px" />
+
+3周后的读写
+
+<img src="/assets/img/firefoxIO3weeks.png" width="314px" />
