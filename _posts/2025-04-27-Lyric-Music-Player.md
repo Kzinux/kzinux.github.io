@@ -32,7 +32,7 @@ mpv终端播放输出里一堆信息，歌词只是其中一行，要让mpv只�
 输出信息搞定了再把窗口大小固定成歌词显示所需的条状，也是一样alacritty和窗口管理器都可以实现。alacritty配置里如下配置。columns是歌词显示长度，lines是窗口高度，只需要歌词所以设为一行。
 ```
 [window.dimensions]
-columns = 58
+columns = 91
 lines = 1
 ```
 ### **窗口位置调整** ###
@@ -123,4 +123,4 @@ alacritty --config-file=/home/xxx/.config/alacritty/alacritty4mpv.toml -e mpv --
 再新建个desktop方便启动，在~/.local/share/applications/下复制一个播放器的desktop过来改改就完成了。
 
 
-<img src="/assets/img/lyrics.gif" width="509px" />
+<img src="/assets/img/lyrics.gif" width="493px" />
