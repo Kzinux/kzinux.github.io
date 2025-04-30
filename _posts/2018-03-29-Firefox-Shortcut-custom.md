@@ -87,7 +87,8 @@ Firefox69开始browser.xul被舍弃了，改成了browser.xhtml，修改方法�
 ##### **2025-04-30更新**
 
 Firefox133升级至137后发现后台加载的网页（包括前台打开时焦点切换到其他程序窗口）需要先按下tab或双击网页才能滚动，up、down、pageup之类的键不受影响，再升级至138后发现滚动快捷键都失效，其它正常。折腾一番后发现除了上面的修改cmd_move*还需要在chrome/browser/content/browser/browser-sets.js下定义，模仿其它的命令格式定义。
-也就是说需要定义两次，一次在browser-sets.js下，一次在browser.xhtml里的mainCommandSet下，只定义一个不管用。
+
+也就是说需要定义两次，一次在browser-sets.js下定义cmd_move*命令，一次在browser.xhtml里的mainCommandSet下定义cmd_move*的id，只定义一个不管用。
 ```
           case "cmd_moveUp":
             goDoCommand('cmd_moveUp');
@@ -104,6 +105,7 @@ Firefox133升级至137后发现后台加载的网页（包括前台打开时焦�
           case "cmd_moveTop":
             goDoCommand('cmd_moveTop');
             break;
+          case "cmd_moveBottom":
             goDoCommand('cmd_moveBottom');
             break;
 ```
