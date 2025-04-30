@@ -83,3 +83,26 @@ Firefox65删除了platformHTMLBindings.xml，用了两天没有jk滚屏好难受
 ##### **2019-10-23更新**
 
 Firefox69开始browser.xul被舍弃了，改成了browser.xhtml，修改方法没变，对象改成browser.xhtml就没问题了。
+
+##### **2025-04-30更新**
+
+Firefox133升级至137后发现后台加载的网页（包括前台打开时焦点切换到其他程序窗口）需要先按下tab或双击网页才能滚动，up、down、pageup之类的键不受影响，再升级至138后发现滚动快捷键都失效，其它正常。折腾一番后发现除了上面的修改cmd_move*还需要在chrome/browser/content/browser/browser-sets.js下定义，模仿其它的命令格式定义。
+```
+          case "cmd_moveUp":
+            goDoCommand('cmd_moveUp');
+            break;
+          case "cmd_moveDown":
+            goDoCommand('cmd_moveDown');
+            break;
+          case "cmd_movePageUp":
+            goDoCommand('cmd_movePageUp');
+            break;
+          case "cmd_movePageDown":
+            goDoCommand('cmd_movePageDown');
+            break;
+          case "cmd_moveTop":
+            goDoCommand('cmd_moveTop');
+            break;
+            goDoCommand('cmd_moveBottom');
+            break;
+```
