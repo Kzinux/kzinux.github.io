@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: Stardict工具软件编译
+title: Stardict工具软件stardict-editor编译
 time: 2025年11月04日 星期二
 location: 中国
 pulished: true
@@ -15,12 +15,8 @@ excerpt_separator: "<!--more-->"
 ## **编译** ##
 由于只需要stardict-editor所以进入tools文件夹，里面有个INSTALL文本介绍。
 首先运行./configure，然后就报错了。
-
 ```./configure: line 20128: AM_ICONV: 未找到命令```
-
 根据关键词搜索找到个链接https://gitlab.archlinux.org/archlinux/packaging/packages/dvdauthor/-/merge_requests/2 ，说是由于gettext包的m4文件移动导致的，下面有修复命令，看不懂照样在tools目录下运行下。
-
 ```autoreconf -fvi -I /usr/share/gettext/m4```
-
 然后重新./configure再通过了，接着make编译等待，完成后在tools/src下就有很多编译成功的辅助程序，包括新版不依赖gtk2的stardict-editor。
 还有一些不依赖gui的命令行版本程序，这样就不担心工具失效了。
