@@ -34,3 +34,14 @@ firefox在隔断时间进行的系统升级中由141-146，没啥大变化，修
 ## **Mesa** ##
 打开pacman.log看了下升级列表，怀疑是mesa升级导致的，这次直接回退到上次使用的mesa版本1:25.2.7-1，firefox重新升级到最新146，配置文件已经迁移就继续使用。现在已经开着用了3天了都没崩溃，确定就是mesa新版导致的firefox崩溃。
 
+------------------20251219------------------------------
+firefox146.0.1发布修复了很多和崩溃相关的bug，mesa25.3.2发布变更列表里也有firefox崩溃相关的bug修复，都更新到最新看看还有没崩溃。
+firefox
+```
+Improved overall stability by fixing crashes related to browsing, graphics, and accessibility features. (Bugs 2001160, 1998185, 1998188)
+Fixed crashes related to media playback and GMP process shutdown. (Bug 2002697)
+```
+mesa
+```
+Firefox crashes in some Gallium drivers since mesa 25.3.0
+```
