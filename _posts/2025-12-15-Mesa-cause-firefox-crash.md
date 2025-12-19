@@ -38,12 +38,12 @@ firefox在隔断时间进行的系统升级中由141-146，没啥大变化，修
 
 firefox146.0.1发布修复了很多和崩溃相关的bug，mesa25.3.2发布变更列表里也有firefox崩溃相关的bug修复，都更新到最新看看还有没崩溃。
 
-firefox
+[firefox 146.0.1](https://www.firefox.com/en-US/firefox/146.0.1/releasenotes/)
 ```
 Improved overall stability by fixing crashes related to browsing, graphics, and accessibility features. (Bugs 2001160, 1998185, 1998188)
 Fixed crashes related to media playback and GMP process shutdown. (Bug 2002697)
 ```
-mesa
+[Mesa 25.3.2](https://docs.mesa3d.org/relnotes/25.3.2.html)
 ```
 Firefox crashes in some Gallium drivers since mesa 25.3.0
 ```
