@@ -38,6 +38,9 @@ firefox在隔断时间进行的系统升级中由141-146，没啥大变化，修
 
 firefox146.0.1发布修复了很多和崩溃相关的bug，mesa25.3.2发布变更列表里也有firefox崩溃相关的bug修复，都更新到最新看看还有没崩溃。
 
+------------------20251222------------------------------
+新版开了3天了都正常，看来bug都修复了。
+
 [firefox 146.0.1](https://www.firefox.com/en-US/firefox/146.0.1/releasenotes/)
 ```
 Improved overall stability by fixing crashes related to browsing, graphics, and accessibility features. (Bugs 2001160, 1998185, 1998188)
